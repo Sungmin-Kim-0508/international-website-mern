@@ -1,7 +1,6 @@
 import React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
-import { BrowserRouter as Router } from "react-router-dom";
-import NavLink from ".";
+import NavItem from ".";
 
 export default {
   title: "atoms/NavItems",
@@ -9,7 +8,7 @@ export default {
 };
 
 export const index: React.FC = () => (
-  <Router>
-    <NavLink to="/">{text("content", "Home")}</NavLink>
-  </Router>
+  <section className="navbar-nav">
+    <NavItem to="/">{text("content", "Home")}</NavItem>
+  </section>
 );

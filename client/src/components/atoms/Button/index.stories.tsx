@@ -1,7 +1,6 @@
 import React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import { BrowserRouter as Router } from "react-router-dom";
 import StoryRouter from "storybook-react-router";
 import Button from ".";
 
@@ -14,11 +13,9 @@ export default {
 };
 
 export const link: React.FC = () => (
-  <Router>
-    <Button theme="primary" to={text("to", "/signIn")}>
-      {text("Router Link", "Read More")}
-    </Button>
-  </Router>
+  <Button theme="primary" to={text("to", "/signIn")}>
+    {text("Router Link", "Read More")}
+  </Button>
 );
 
 export const success: React.FC = () => (

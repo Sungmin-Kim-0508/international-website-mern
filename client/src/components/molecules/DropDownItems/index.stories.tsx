@@ -1,5 +1,5 @@
 import React from "react";
-import { withKnobs } from "@storybook/addon-knobs";
+import { withKnobs, text } from "@storybook/addon-knobs";
 import Dropdown from "../DropDownItems";
 
 export default {
@@ -13,6 +13,18 @@ export default {
 /** Dropdown List Component */
 export const dropDown: React.FC = () => (
   <ul className="nav nav-tabs">
-    <Dropdown dropdownItems={["For Students", "For Volunteers"]} />
+    <Dropdown
+      dropdownMenuLabel={text("Dropdown Label", "Resource")}
+      dropdownItems={[
+        {
+          navName: text("dropdown1", "For Students"),
+          to: text("to1", "/forStudents")
+        },
+        {
+          navName: text("dropdown2", "For Volunteers"),
+          to: text("to2", "/forVolunteers")
+        }
+      ]}
+    />
   </ul>
 );

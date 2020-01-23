@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const DropDownNavItem = styled.li.attrs({
+export const Dropdown = styled.li.attrs({
   className: "nav-item dropdown"
 })``;
 
@@ -23,6 +24,6 @@ export const DropDownMenu = styled.div.attrs({
   className: "dropdown-menu"
 })``;
 
-export const Item = styled.a.attrs({
+export const Item = styled(Link).attrs({
   className: "dropdown-item"
 })``;

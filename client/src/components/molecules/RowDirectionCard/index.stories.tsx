@@ -1,6 +1,5 @@
 import React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
-import { BrowserRouter as Router } from "react-router-dom";
 import RowDirectionCard from ".";
 
 export default {
@@ -12,7 +11,5 @@ export default {
 };
 
 export const index: React.FC = () => (
-  <Router>
-    <RowDirectionCard to={text("to", "/signIn")} />
-  </Router>
+  <RowDirectionCard to={text("to", "/signIn")} />
 );

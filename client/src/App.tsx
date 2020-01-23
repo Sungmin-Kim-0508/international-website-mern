@@ -44,7 +44,6 @@ const App: React.FC = () => {
         </Router>
       </header>
 
-      <Dropdown dropdownItems={["Hello", "World"]} />
       <ContactSection />
     </div>
   );

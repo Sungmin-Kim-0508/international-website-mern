@@ -5,7 +5,7 @@ interface IProps {
   styleType: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   isItalic?: boolean;
   isBold?: boolean;
-  color: "primary" | "secondary";
+  color: "primary" | "secondary" | "white";
 }
 
 const Typography: React.FC<IProps> = ({

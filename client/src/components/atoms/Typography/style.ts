@@ -4,7 +4,7 @@ interface TypographyStyleProps {
   styleType: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   isItalic?: boolean;
   isBold?: boolean;
-  color: "primary" | "secondary";
+  color: "primary" | "secondary" | "white";
 }
 
 export const styleTypeFunc = (
@@ -45,6 +45,8 @@ export const TypographyStyle = styled.span<TypographyStyleProps>`
       return "#000000";
     } else if (props.color === "secondary") {
       return "#fff200";
+    } else if (props.color === "white") {
+      return "#ffffff";
     } else {
       return "#000000";
     }
