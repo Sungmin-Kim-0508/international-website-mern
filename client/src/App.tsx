@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+//import "./App.css";
+import { createGlobalStyle } from "styled-components";
+import Typography from "./components/atoms/Typography";
+import LabelDate from "components/atoms/LabelDate";
+import Paragraph from "components/atoms/Paragraph";
+import Button from "components/atoms/Button";
+import Input from "components/atoms/Input";
+import NavItem from "components/atoms/NavItem";
+import NavBrand from "components/atoms/NavBrand";
+import Dropdown from "components/molecules/DropDownItems";
+import { BrowserRouter as Router } from "react-router-dom";
+import { ContactSection } from "components";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+  }
+`;
 
 const App: React.FC = () => {
   return (
     <div className="App">
+      <GlobalStyle />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Input placeholder="What's up" />
+        <Typography styleType="h4" color="secondary" isItalic={true}>
+          Lorem Ipsum
+        </Typography>
+        <LabelDate color="gray">LabelDate</LabelDate>
+        <Paragraph color="gray">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis
+          urna vitae eros vulputate mollis eget finibus elit. Quisque sed.
+        </Paragraph>
+        <Button theme="primary">Button</Button>
+        <Router>
+          <NavBrand to="/">Home Brand</NavBrand>
+          <NavItem to="/">Home</NavItem>
+        </Router>
       </header>
+
+      <Dropdown dropdownItems={["Hello", "World"]} />
+      <ContactSection />
     </div>
   );
-}
+};
 
 export default App;

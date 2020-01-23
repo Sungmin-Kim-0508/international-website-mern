@@ -9,3 +9,5 @@ This is a toy project in order for me to learn React + Express + PassportJS + SC
 - Database      : MongoDB + Mongoose
 - Testing Tools : Storybook, Cypress
 - SCSS
+
+## Why I introduce Atomic Design Pattern?
