@@ -1,6 +1,12 @@
 import React from "react";
 import * as Sc from "./style";
-import { Typography, Img } from "components";
+import {
+  WELCOME,
+  INTERNATIONAL_STUDENTS,
+  SECTION1_PARAGRAPH,
+  LOCATION
+} from "commons/string";
+import { Typography, Img, Paragraph } from "components";
 
 function GreetingSection(): React.ReactElement {
   const bgImg = `${process.env.PUBLIC_URL}/img/papaioannou-kostas-tysecUm5HJA-unsplash.jpg`;
@@ -16,15 +22,18 @@ function GreetingSection(): React.ReactElement {
       </Sc.ImgWrapper>
       <Sc.TypographyWrapper>
         <Typography styleType="h1" color="white">
-          Welcome
+          {WELCOME}
         </Typography>
-        <Typography styleType="h1" color="secondary">
-          International Students
+        <Typography styleType="h2" color="secondary">
+          {INTERNATIONAL_STUDENTS}
         </Typography>
-        <Typography styleType="h1" color="white">
-          London, Ontario, Canada
+        <Typography styleType="h3" color="white">
+          {LOCATION}
         </Typography>
       </Sc.TypographyWrapper>
+      <Sc.ParagraphWrapper>
+        <Paragraph color="white">{SECTION1_PARAGRAPH}</Paragraph>
+      </Sc.ParagraphWrapper>
     </Sc.Container>
   );
 }
