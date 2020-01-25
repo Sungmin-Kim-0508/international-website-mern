@@ -1,7 +1,7 @@
 import React from "react";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import ColumnDirectionCard from "../ColumnDirectionCard";
+import ColumnDirectionCard from ".";
 
 export default {
   title: "molecules/ColumnDirectionCard",
@@ -13,6 +13,7 @@ export default {
 
 export const index: React.FC = () => (
   <ColumnDirectionCard
+    to="/about"
     note={{
       title: "Speaker Interviews",
       date: "January 01 2020",

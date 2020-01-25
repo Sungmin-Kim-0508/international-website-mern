@@ -1,12 +1,13 @@
 import React from "react";
 import * as Sc from "./style";
 import { Button, LabelDate, Paragraph, Typography, Img } from "components";
+import { note } from "commons/__types__";
 
 type ColumnDirectionCardProps = {
   /** Redirect to other route of the object of react-router-dom */
-  to?: string;
+  to: string;
   /** Title, Date, Body, Image Src */
-  note: { title: string; date: string; body: string; src: string };
+  note: note;
 };
 
 function ColumnDirectionCard({
@@ -31,9 +32,11 @@ function ColumnDirectionCard({
         <Sc.ParagraphWrapper>
           <Paragraph color="gray">{body}</Paragraph>
         </Sc.ParagraphWrapper>
-        <Button theme="primary" to={to}>
-          Read More
-        </Button>
+        <Sc.BtnWrapper>
+          <Button theme="primary" to={to}>
+            Read More
+          </Button>
+        </Sc.BtnWrapper>
       </Sc.ContentWrapper>
     </Sc.Container>
   );

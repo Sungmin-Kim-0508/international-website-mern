@@ -1,22 +1,30 @@
 import React from "react";
 import * as Sc from "./style";
 import { ContactLabels } from "components";
+import {
+  CONTACT_NUMBER,
+  NUMBER,
+  EMAIL_ADDRESS,
+  EMAIL,
+  WEBSITE,
+  WEBSITE_ADDRESS
+} from "commons/string";
 import uuid4 from "uuid4";
 
 type ContactLabelProps = {};
 
 const notes = [
   {
-    title: "Contact Number",
-    content: "+1 123 123 1234"
+    title: CONTACT_NUMBER,
+    content: NUMBER
   },
   {
-    title: "Email Address",
-    content: "email@email.com"
+    title: EMAIL_ADDRESS,
+    content: EMAIL
   },
   {
-    title: "Website",
-    content: "www.abc.com"
+    title: WEBSITE,
+    content: WEBSITE_ADDRESS
     // content: "http://www.internationalstudentslondon.org/"
   }
 ];

@@ -4,8 +4,10 @@ export const Container = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 10rem auto;
-  /* width: 25rem;
-  height: 18rem; */
+  /* Mobile */
+  @media screen and (max-width: 740px) {
+    grid-template-columns: 7.5rem auto;
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -17,6 +19,7 @@ export const ContentWrapper = styled.div`
   width: 100%;
   height: 100%;
   padding: 10px;
+  background-color: #ffffff;
 `;
 
 export const TypographyWrapper = styled.div`
@@ -35,4 +38,9 @@ export const DateWrapper = styled.div`
 export const ParagraphWrapper = styled.div`
   display: grid;
   justify-content: left;
+`;
+
+export const BtnWrapper = styled.div`
+  display: grid;
+  justify-content: center;
 `;

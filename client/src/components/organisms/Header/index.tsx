@@ -1,6 +1,6 @@
 import React from "react";
 import * as Sc from "./style";
-import * as routes from "__routes__";
+import * as routes from "commons/__routes__";
 import { NavBrand, NavItem, DropDownItems } from "components";
 import Headroom from "react-headroom";
 
