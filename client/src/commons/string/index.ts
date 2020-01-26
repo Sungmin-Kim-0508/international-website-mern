@@ -5,6 +5,13 @@ export const LOCATION = "London, Ontario, Canada";
 export const SECTION1_PARAGRAPH =
   "We offer programs which will help you to adapt to life in Canada, to thrive in your life here, to improve your English and to build a strong network of relationships";
 
+export const ABOUT_TITLE = "Why Are We Involved?";
+export const ABOUT_PARAGRAPH1 =
+  "We have travelled and lived in other countries and understand many of the stresses and unknowns that international students face upon arrival in Canada...especially the need for friendship and language help.";
+export const ABOUT_PARAGRAPH2 =
+  "Our lives have been enriched through friendships with people of many different cultural and faith backgrounds who have come from all over the world. We want to make it easier for other people to have similar life-enriching relationships. We are working in London and offer opportunities for Canadians and International students to build friendships.";
+export const STUART_MARY_SMITH = "Stuart & Mary Smith - London City Leaders";
+
 export const COLUMN_CARD_TITLE = "Speaker Interviews with J.Doe";
 export const COLUMN_CARD_DATE = "January 01, 2020";
 export const COLUMN_CARD_LOCATION = "11 Rose St. London ON";

@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: 530px;
   /* Tablet */
   @media screen and (min-width: 741px) and (max-width: 1120px) {
-    height: 600px;
+    height: 650px;
   }
 `;
 

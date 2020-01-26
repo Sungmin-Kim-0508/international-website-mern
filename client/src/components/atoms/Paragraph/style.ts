@@ -2,6 +2,7 @@ import styled, { ThemedStyledProps } from "styled-components";
 
 type ParagraphStyleProps = {
   color: "black" | "white" | "gray" | string;
+  textAlign: "left" | "right" | "center" | "justify" | "inherit";
 };
 
 const colorPick = (props: ThemedStyledProps<ParagraphStyleProps, any>) => {
@@ -14,6 +15,6 @@ const colorPick = (props: ThemedStyledProps<ParagraphStyleProps, any>) => {
 export const ParagraphStyle = styled.p<ParagraphStyleProps>`
   font-size: 18px;
   line-height: 20px;
-  text-align: center;
+  text-align: ${props => props.textAlign};
   color: ${colorPick};
 `;

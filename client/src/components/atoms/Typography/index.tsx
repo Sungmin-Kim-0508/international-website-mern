@@ -5,19 +5,22 @@ interface IProps {
   styleType: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   isItalic?: boolean;
   isBold?: boolean;
-  color: "primary" | "secondary" | "white";
+  textAlign?: "left" | "right" | "center" | "justify" | "inherit";
+  color: "primary" | "secondary" | "white" | "gray";
 }
 
 const Typography: React.FC<IProps> = ({
   children,
   styleType,
   color,
+  textAlign = "left",
   isItalic = false,
   isBold = false
 }) => {
   return (
     <Sc.TypographyStyle
       styleType={styleType}
+      textAlign={textAlign}
       isItalic={isItalic}
       isBold={isBold}
       color={color}
