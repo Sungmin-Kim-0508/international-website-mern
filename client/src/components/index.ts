@@ -20,5 +20,7 @@ export { default as ColumnDirectionCard } from "./molecules/ColumnDirectionCard"
 export { default as DropDownItems } from "./molecules/DropDownItems";
 export { default as RowDirectionCard } from "./molecules/RowDirectionCard";
 export { default as ProgramLabels } from "./molecules/ProgramLabels";
+export { default as ProgramGrid } from "./molecules/ProgramGrid";
+
 // organisms
 export { default as ContactSection } from "./organisms/ContactSection";
