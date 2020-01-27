@@ -15,3 +15,8 @@ export type rowDirectionCard = {
   alt?: string;
   to: string;
 };
+
+export type information = {
+  title: string;
+  date: string;
+};

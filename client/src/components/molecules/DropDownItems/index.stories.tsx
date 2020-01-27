@@ -1,6 +1,6 @@
 import React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
-import Dropdown from "../DropDownItems";
+import Dropdown from ".";
 
 export default {
   title: "molecules/Dropdown",

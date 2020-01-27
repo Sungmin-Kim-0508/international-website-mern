@@ -24,6 +24,10 @@ export const LATEST_NEWS = "Latest News";
 export const LATEST_NEWS_DESC =
   "Latest information on friendship partners, politics around us";
 
+export const INFORMATION = "Information";
+export const FORSTUDENTS = "For Students";
+export const FORVOLUNTEER = "For Volunteer";
+
 export const CONTACT = "Contact";
 export const CONTACT_NUMBER = "Contact Number";
 export const NUMBER = "+1 123 123 1234";
