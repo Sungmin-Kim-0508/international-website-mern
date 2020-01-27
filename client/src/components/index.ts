@@ -19,6 +19,7 @@ export { default as ColumnCardGrid } from "./molecules/ColumnCardGrid";
 export { default as ColumnDirectionCard } from "./molecules/ColumnDirectionCard";
 export { default as DropDownItems } from "./molecules/DropDownItems";
 export { default as RowDirectionCard } from "./molecules/RowDirectionCard";
+export { default as RowCardGrid } from "./molecules/RowCardGrid";
 export { default as ProgramLabels } from "./molecules/ProgramLabels";
 export { default as ProgramGrid } from "./molecules/ProgramGrid";
 

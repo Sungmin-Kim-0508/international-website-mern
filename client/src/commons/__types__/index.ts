@@ -9,3 +9,9 @@ export type note = {
   body: string;
   src: string;
 };
+
+export type rowDirectionCard = {
+  src?: string;
+  alt?: string;
+  to: string;
+};

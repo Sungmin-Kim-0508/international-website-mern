@@ -4,9 +4,13 @@ export const Container = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 10rem auto;
+
   /* Mobile */
   @media screen and (max-width: 740px) {
-    grid-template-columns: 7.5rem auto;
+    /* grid-template-columns: 7.5rem auto; */
+    grid-auto-flow: row;
+    grid-template-rows: 10rem auto;
+    grid-template-columns: unset;
   }
 `;
 

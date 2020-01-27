@@ -1,42 +1,42 @@
 import styled from "styled-components";
 
+const bgUrl = `${process.env.PUBLIC_URL}/img/focus_dinner.jpg`;
+
 export const Container = styled.div`
-  position: relative;
+  display: grid;
+  grid-template-rows: 0.5fr 1.5fr;
   width: 100%;
   height: 530px;
+  padding: 2rem 6rem;
+
+  background-image: url(${bgUrl});
+  background-position: center;
+  background-size: cover;
+
   /* Tablet */
-  @media screen and (min-width: 741px) and (max-width: 1120px) {
+  @media screen and (max-width: 1120px) {
     height: 100%;
+    padding: 1rem;
+    row-gap: 1rem;
+    grid-template-rows: unset;
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 740px) {
+    background-image: none;
+    padding: 3rem;
   }
 `;
 
 export const ImgWrapper = styled.section`
-  position: absolute;
   width: 100%;
   height: 100%;
-
-  /* Mobile */
-  @media screen and (max-width: 740px) {
-    display: none;
-  }
 `;
 
 export const TitleWrapper = styled.section`
-  position: absolute;
-  top: 0.5rem;
   width: 100%;
   display: grid;
   justify-content: center;
 `;
 
-export const CardGridWrapper = styled.section`
-  position: absolute;
-
-  @media screen and (max-width: 1120px) {
-    top: 3rem;
-  }
-
-  @media screen and (min-width: 1121px) {
-    top: 6rem;
-  }
-`;
+export const CardGridWrapper = styled.section``;

@@ -20,6 +20,10 @@ export const COLUMN_CARD_BODY =
 
 export const UPCOMING_EVENT = "Upcoming Event";
 
+export const LATEST_NEWS = "Latest News";
+export const LATEST_NEWS_DESC =
+  "Latest information on friendship partners, politics around us";
+
 export const CONTACT = "Contact";
 export const CONTACT_NUMBER = "Contact Number";
 export const NUMBER = "+1 123 123 1234";
