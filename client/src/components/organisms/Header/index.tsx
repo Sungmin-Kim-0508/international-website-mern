@@ -30,10 +30,7 @@ const memberDropdownItems = [
 
 function Header({}: HeaderProps): React.ReactElement {
   return (
-    <Headroom
-      onPin={() => console.log("Pinned")}
-      onUnpin={() => console.log("unpinned")}
-    >
+    <Headroom>
       <Sc.Nav>
         <Sc.NavBrandWrapper>
           <NavBrand to={routes.home}>ISMC</NavBrand>

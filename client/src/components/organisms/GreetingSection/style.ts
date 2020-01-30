@@ -30,13 +30,14 @@ export const ParagraphWrapper = styled.section`
   top: 16rem;
   padding: 0 20rem;
 
-  /* Mobile */
-  @media screen and (max-width: 740px) {
-    top: 17rem;
-    padding: 0 1rem;
+  /* Tablet */
+  @media screen and (max-width: 1120px) {
+    padding: 0 7rem;
   }
 
-  @media screen and (min-width: 741px) and (max-width: 1120px) {
-    padding: 0 7rem;
+  /* Mobile */
+  @media screen and (max-width: 740px) {
+    top: 19rem;
+    padding: 0 1rem;
   }
 `;

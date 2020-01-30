@@ -8,6 +8,7 @@ export type note = {
   date: string;
   body: string;
   src: string;
+  to: string;
 };
 
 export type rowDirectionCard = {

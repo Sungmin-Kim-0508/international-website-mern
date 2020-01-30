@@ -24,10 +24,10 @@ function GreetingSection(): React.ReactElement {
         <Typography styleType="h1" color="white">
           {WELCOME}
         </Typography>
-        <Typography styleType="h2" color="secondary">
+        <Typography styleType="h2" color="secondary" textAlign="center">
           {INTERNATIONAL_STUDENTS}
         </Typography>
-        <Typography styleType="h3" color="white">
+        <Typography styleType="h3" color="white" textAlign="center">
           {LOCATION}
         </Typography>
       </Sc.TypographyWrapper>

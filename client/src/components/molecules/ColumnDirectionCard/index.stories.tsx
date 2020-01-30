@@ -1,6 +1,7 @@
 import React from "react";
 import { withKnobs } from "@storybook/addon-knobs";
 
+import uuid4 from "uuid4";
 import ColumnDirectionCard from ".";
 
 export default {
@@ -13,10 +14,10 @@ export default {
 
 export const index: React.FC = () => (
   <ColumnDirectionCard
-    to="/about"
     note={{
       title: "Speaker Interviews",
       date: "January 01 2020",
+      to: uuid4(),
       body:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis urna vitae eros vulputate mollis eget finibus elit. Quisque sed.",
       src:

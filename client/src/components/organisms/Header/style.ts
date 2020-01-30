@@ -7,7 +7,7 @@ export const Nav = styled.nav.attrs({
   display: grid;
   grid-auto-flow: column;
   justify-content: space-around;
-  background: rgba(255, 255, 255, 0.31);
+  background: rgba(255, 206, 69);
 `;
 
 export const NavBrandWrapper = styled.section.attrs({

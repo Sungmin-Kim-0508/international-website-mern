@@ -1,7 +1,7 @@
 import React from "react";
 import { withKnobs } from "@storybook/addon-knobs";
 import InformationLabelsList from ".";
-import { information } from "commons/__types__";
+import { stuInfos } from "commons/__mock_json__";
 
 export default {
   title: "molecules/InformationLabelsList",
@@ -11,19 +11,4 @@ export default {
   }
 };
 
-const infos: information[] = [
-  {
-    title: "ISMC Guide Book for New Comer",
-    date: "January 01th, 2020"
-  },
-  {
-    title: "ISMC Guide Book for New Comer",
-    date: "January 01th, 2020"
-  },
-  {
-    title: "ISMC Guide Book for New Comer",
-    date: "January 01th, 2020"
-  }
-];
-
-export const index: React.FC = () => <InformationLabelsList infos={infos} />;
+export const index: React.FC = () => <InformationLabelsList infos={stuInfos} />;

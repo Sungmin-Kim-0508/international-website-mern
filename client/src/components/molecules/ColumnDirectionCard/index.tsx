@@ -4,17 +4,14 @@ import { Button, LabelDate, Paragraph, Typography, Img } from "components";
 import { note } from "commons/__types__";
 
 type ColumnDirectionCardProps = {
-  /** Redirect to other route of the object of react-router-dom */
-  to: string;
   /** Title, Date, Body, Image Src */
   note: note;
 };
 
 function ColumnDirectionCard({
-  to,
   note
 }: ColumnDirectionCardProps): React.ReactElement {
-  const { title, date, body, src } = note;
+  const { title, date, body, to, src } = note;
   return (
     <Sc.Container>
       <Sc.ImgWrapper>

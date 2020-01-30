@@ -26,4 +26,11 @@ export { default as ProgramLabels } from "./molecules/ProgramLabels";
 export { default as ProgramGrid } from "./molecules/ProgramGrid";
 
 // organisms
+export { default as AboutSection } from "./organisms/AboutSection";
 export { default as ContactSection } from "./organisms/ContactSection";
+export { default as EventsSection } from "./organisms/EventsSection";
+export { default as GreetingSection } from "./organisms/GreetingSection";
+export { default as Header } from "./organisms/Header";
+export { default as InformationSection } from "./organisms/InformationSection";
+export { default as NewsSection } from "./organisms/NewsSection";
+export { default as ProgramSection } from "./organisms/ProgramSection";

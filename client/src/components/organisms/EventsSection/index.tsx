@@ -4,12 +4,11 @@ import { note } from "commons/__types__";
 import { UPCOMING_EVENT } from "commons/string";
 import { ColumnCardGrid, Typography } from "components";
 
-type EventsSectionProps = {
-  to: string;
+interface EventsSectionProps {
   notes: note[];
-};
+}
 
-function EventsSection({ to, notes }: EventsSectionProps): React.ReactElement {
+function EventsSection({ notes }: EventsSectionProps): React.ReactElement {
   return (
     <Sc.Container>
       <Sc.TitleWrapper>
@@ -18,7 +17,7 @@ function EventsSection({ to, notes }: EventsSectionProps): React.ReactElement {
         </Typography>
       </Sc.TitleWrapper>
       <Sc.CardGridWrapper>
-        <ColumnCardGrid to={to} notes={notes} />
+        <ColumnCardGrid notes={notes} />
       </Sc.CardGridWrapper>
     </Sc.Container>
   );

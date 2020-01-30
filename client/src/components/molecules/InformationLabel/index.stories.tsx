@@ -11,7 +11,7 @@ export default {
   }
 };
 
-const info = {
+const info: information = {
   title: "ISMC Guide Book for New Comer",
   date: "January 01th, 2020"
 };
