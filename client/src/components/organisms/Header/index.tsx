@@ -2,32 +2,10 @@ import React from "react";
 import * as Sc from "./style";
 import * as routes from "commons/__routes__";
 import { slide as Menu } from "react-burger-menu";
-import { NavBrand, NavItem, DropDownItems } from "components";
+import { NavItem } from "components";
 // import Headroom from "react-headroom";
 
 type HeaderProps = {};
-
-const resourceDropdownItems = [
-  {
-    navName: "For Students",
-    to: routes.forStudents
-  },
-  {
-    navName: "For Volunteers",
-    to: routes.forVolunteers
-  }
-];
-
-const memberDropdownItems = [
-  {
-    navName: "Sign In",
-    to: routes.signIn
-  },
-  {
-    navName: "Sign Up",
-    to: routes.signUp
-  }
-];
 
 class Header extends React.Component<HeaderProps, {}> {
   render() {

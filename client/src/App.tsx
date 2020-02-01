@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 //import "./App.css";
 import { createGlobalStyle } from "styled-components";
 import Typography from "./components/atoms/Typography";
@@ -9,7 +8,6 @@ import Button from "components/atoms/Button";
 import Input from "components/atoms/Input";
 import NavItem from "components/atoms/NavItem";
 import NavBrand from "components/atoms/NavBrand";
-import Dropdown from "components/molecules/DropDownItems";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ContactSection } from "components";
 

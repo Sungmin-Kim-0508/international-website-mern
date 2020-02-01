@@ -1,26 +1,25 @@
-import styled, { css, ThemedStyledProps } from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
-import { ButtonProps } from "react-bootstrap/Button";
 
-const themeFunc = (props: ThemedStyledProps<ButtonProps, any>) => {
+const themeFunc = props => {
   if (props.theme === "primary") return "#fff200";
   else if (props.theme === "danger") return "#C70000";
   else if (props.theme === "success") return "#00C2FF";
 };
 
-const hoverThemFucn = (props: ThemedStyledProps<ButtonProps, any>) => {
+const hoverThemFucn = props => {
   if (props.theme === "primary") return "#DCD221";
   else if (props.theme === "danger") return "#F24949";
   else if (props.theme === "success") return "#3FAACC";
 };
 
-const bootstrapBtn = (props: ThemedStyledProps<ButtonProps, any>) => {
+const bootstrapBtn = props => {
   if (props.theme === "primary") return "primary";
   else if (props.theme === "danger") return "danger";
   else if (props.theme === "success") return "success";
 };
 
-const BtnStyle = css<ButtonProps>`
+const BtnStyle = css`
   background-color: ${themeFunc};
   border-color: ${themeFunc};
   color: #ffffff;
