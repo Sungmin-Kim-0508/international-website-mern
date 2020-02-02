@@ -1,15 +1,16 @@
 import React from "react";
-//import "./App.css";
 import { createGlobalStyle } from "styled-components";
-import Typography from "./components/atoms/Typography";
-import LabelDate from "components/atoms/LabelDate";
-import Paragraph from "components/atoms/Paragraph";
-import Button from "components/atoms/Button";
-import Input from "components/atoms/Input";
-import NavItem from "components/atoms/NavItem";
-import NavBrand from "components/atoms/NavBrand";
+import {
+  Typography,
+  LabelDate,
+  Paragraph,
+  Button,
+  Input,
+  NavItem,
+  NavBrand,
+  ContactSection
+} from "components";
 import { BrowserRouter as Router } from "react-router-dom";
-import { ContactSection } from "components";
 
 const GlobalStyle = createGlobalStyle`
   body {

@@ -3,7 +3,6 @@ import * as Sc from "./style";
 import * as routes from "commons/__routes__";
 import { slide as Menu } from "react-burger-menu";
 import { NavItem } from "components";
-// import Headroom from "react-headroom";
 
 type HeaderProps = {};
 
