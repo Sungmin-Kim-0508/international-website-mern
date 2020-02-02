@@ -1,6 +1,6 @@
 import React from "react";
 import * as Sc from "./style";
-import { InformationLabelList, Typography } from "components";
+import { InformationLabelList, Typography, Anchor } from "components";
 import { information } from "commons/__types__";
 import { INFORMATION, FORSTUDENTS, FORVOLUNTEER } from "commons/string";
 
@@ -22,14 +22,18 @@ function InformationSection({
       </Sc.TitleWrapper>
       <Sc.ContentWrapper>
         <Sc.BoxWrapper>
-          <Typography styleType="h2" color="white" textAlign="center">
-            {FORSTUDENTS}
+          <Typography styleType="h2" textAlign="center">
+            <Anchor to="/forStudents" color="white">
+              {FORSTUDENTS}
+            </Anchor>
           </Typography>
           <InformationLabelList infos={stuInfos} />
         </Sc.BoxWrapper>
         <Sc.BoxWrapper>
-          <Typography styleType="h2" color="white" textAlign="center">
-            {FORVOLUNTEER}
+          <Typography styleType="h2" textAlign="center">
+            <Anchor to="/forVolunteer" color="white">
+              {FORVOLUNTEER}
+            </Anchor>
           </Typography>
           <InformationLabelList infos={voluInfos} />
         </Sc.BoxWrapper>

@@ -32,7 +32,7 @@ function HomeTemplate({
   labels
 }: HomeTemplateProps): React.ReactElement {
   return (
-    <div>
+    <>
       <Header />
       <GreetingSection />
       <AboutSection />
@@ -41,7 +41,7 @@ function HomeTemplate({
       <NewsSection cards={cards} />
       <InformationSection stuInfos={stuInfos} voluInfos={voluInfos} />
       <ContactSection />
-    </div>
+    </>
   );
 }
 

@@ -18,7 +18,7 @@ export const COLUMN_CARD_LOCATION = "11 Rose St. London ON";
 export const COLUMN_CARD_BODY =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis urna vitae eros vulputate mollis eget finibus elit. Quisque sed.";
 
-export const UPCOMING_EVENT = "Upcoming Event";
+export const UPCOMING_EVENT = "Upcoming Events";
 
 export const LATEST_NEWS = "Latest News";
 export const LATEST_NEWS_DESC =

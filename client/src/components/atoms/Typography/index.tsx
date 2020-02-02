@@ -6,13 +6,13 @@ interface IProps {
   isItalic?: boolean;
   isBold?: boolean;
   textAlign?: "left" | "right" | "center" | "justify" | "inherit";
-  color: "primary" | "secondary" | "white" | "gray";
+  color?: "primary" | "secondary" | "white" | "gray";
 }
 
 const Typography: React.FC<IProps> = ({
   children,
   styleType,
-  color,
+  color = "primary",
   textAlign = "left",
   isItalic = false,
   isBold = false

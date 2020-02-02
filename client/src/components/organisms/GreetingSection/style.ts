@@ -1,8 +1,19 @@
 import styled from "styled-components";
 
+const bgImg = `${process.env.PUBLIC_URL}/img/papaioannou-kostas-tysecUm5HJA-unsplash.jpg`;
 export const Container = styled.div`
-  position: relative;
+  background-image: url(${bgImg});
+  background-position: center;
+  background-size: cover;
   height: 33.5rem;
+`;
+
+export const ContentWrapper = styled.section`
+  display: grid;
+  align-content: center;
+  row-gap: 2rem;
+  width: 100%;
+  height: 100%;
 `;
 
 export const ImgWrapper = styled.section`
@@ -10,24 +21,15 @@ export const ImgWrapper = styled.section`
 `;
 
 export const TypographyWrapper = styled.section`
-  position: absolute;
-  top: 6rem;
   display: grid;
   width: 100%;
   justify-content: center;
   justify-items: center;
-
-  /* Mobile */
-  @media screen and (max-width: 740px) {
-    top: 7rem;
-  }
 `;
 
 export const ParagraphWrapper = styled.section`
-  position: absolute;
   display: grid;
   justify-content: center;
-  top: 16rem;
   padding: 0 20rem;
 
   /* Tablet */
@@ -37,7 +39,6 @@ export const ParagraphWrapper = styled.section`
 
   /* Mobile */
   @media screen and (max-width: 740px) {
-    top: 19rem;
     padding: 0 1rem;
   }
 `;

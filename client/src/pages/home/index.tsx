@@ -1,12 +1,26 @@
 import React from "react";
+import HomeTemplates from "./templates";
+import {
+  notes,
+  stuInfos,
+  voluInfos,
+  cards,
+  labels
+} from "commons/__mock_json__";
 
-interface HomePageProps {}
+type HomePageProps = {};
 
 function HomePage({}: HomePageProps): React.ReactElement {
   return (
-    <div>
-      <p>HomePage</p>
-    </div>
+    <>
+      <HomeTemplates
+        notes={notes}
+        stuInfos={stuInfos}
+        voluInfos={voluInfos}
+        cards={cards}
+        labels={labels}
+      />
+    </>
   );
 }
 

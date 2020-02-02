@@ -19,10 +19,15 @@ function RowDirectionCard({
       </Sc.ImgWrapper>
       <Sc.ContentWrapper>
         <LabelDate color="gray">January 01, 2020</LabelDate>
-        <Typography styleType="h4" color="primary">
+        <Typography styleType="h4" color="primary" textAlign="center">
           Give To End Childhood ilnesses
         </Typography>
-        <Typography styleType="h6" color="primary" isItalic={true}>
+        <Typography
+          styleType="h6"
+          color="primary"
+          isItalic={true}
+          textAlign="right"
+        >
           <span style={{ color: "#718093" }}>By</span> Stuart & Mary
         </Typography>
       </Sc.ContentWrapper>

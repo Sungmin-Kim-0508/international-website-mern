@@ -1,6 +1,6 @@
 import React from "react";
 import * as Sc from "./style";
-import { Typography, Paragraph, RowCardGrid } from "components";
+import { Typography, Paragraph, RowCardGrid, Anchor } from "components";
 import { rowDirectionCard } from "commons/__types__";
 import { LATEST_NEWS, LATEST_NEWS_DESC } from "commons/string";
 
@@ -13,7 +13,7 @@ function NewsSection({ cards }: NewsSectionProps): React.ReactElement {
     <Sc.Container>
       <Sc.TypographyWrapper>
         <Typography styleType="h1" color="primary" textAlign="center">
-          {LATEST_NEWS}
+          <Anchor to="/news">{LATEST_NEWS}</Anchor>
         </Typography>
         <Paragraph color="gray">{LATEST_NEWS_DESC}</Paragraph>
       </Sc.TypographyWrapper>

@@ -6,34 +6,27 @@ import {
   SECTION1_PARAGRAPH,
   LOCATION
 } from "commons/string";
-import { Typography, Img, Paragraph } from "components";
+import { Typography, Paragraph } from "components";
 
 function GreetingSection(): React.ReactElement {
-  const bgImg = `${process.env.PUBLIC_URL}/img/papaioannou-kostas-tysecUm5HJA-unsplash.jpg`;
-
   return (
     <Sc.Container>
-      <Sc.ImgWrapper>
-        <Img
-          src={bgImg}
-          objectFit="cover"
-          alt="papaioannou-kostas-tysecUm5HJA-unsplash.jpg"
-        />
-      </Sc.ImgWrapper>
-      <Sc.TypographyWrapper>
-        <Typography styleType="h1" color="white">
-          {WELCOME}
-        </Typography>
-        <Typography styleType="h2" color="secondary" textAlign="center">
-          {INTERNATIONAL_STUDENTS}
-        </Typography>
-        <Typography styleType="h3" color="white" textAlign="center">
-          {LOCATION}
-        </Typography>
-      </Sc.TypographyWrapper>
-      <Sc.ParagraphWrapper>
-        <Paragraph color="white">{SECTION1_PARAGRAPH}</Paragraph>
-      </Sc.ParagraphWrapper>
+      <Sc.ContentWrapper>
+        <Sc.TypographyWrapper>
+          <Typography styleType="h1" color="white">
+            {WELCOME}
+          </Typography>
+          <Typography styleType="h1" color="secondary" textAlign="center">
+            {INTERNATIONAL_STUDENTS}
+          </Typography>
+          <Typography styleType="h2" color="white" textAlign="center">
+            {LOCATION}
+          </Typography>
+        </Sc.TypographyWrapper>
+        <Sc.ParagraphWrapper>
+          <Paragraph color="white">{SECTION1_PARAGRAPH}</Paragraph>
+        </Sc.ParagraphWrapper>
+      </Sc.ContentWrapper>
     </Sc.Container>
   );
 }
