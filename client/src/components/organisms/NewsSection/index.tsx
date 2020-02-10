@@ -1,11 +1,11 @@
 import React from "react";
 import * as Sc from "./style";
 import { Typography, Paragraph, RowCardGrid, Anchor } from "components";
-import { rowDirectionCard } from "commons/__types__";
+import { NewsState } from "commons/__types__";
 import { LATEST_NEWS, LATEST_NEWS_DESC } from "commons/string";
 
 type NewsSectionProps = {
-  cards: rowDirectionCard[];
+  cards: NewsState;
 };
 
 function NewsSection({ cards }: NewsSectionProps): React.ReactElement {

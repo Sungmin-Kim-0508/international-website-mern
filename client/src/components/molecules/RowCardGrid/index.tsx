@@ -1,17 +1,19 @@
 import React from "react";
 import * as Sc from "./style";
 import { RowDirectionCard } from "components";
-import { rowDirectionCard } from "commons/__types__";
+import { NewsState, News } from "commons/__types__";
+import uuid4 from "uuid4";
 
 type RowCardGridProps = {
-  cards: rowDirectionCard[];
+  cards: NewsState;
 };
 
 function RowCardGrid({ cards }: RowCardGridProps): React.ReactElement {
+  const { docs } = cards.news;
   return (
     <Sc.Container>
-      {cards.map(card => (
-        <RowDirectionCard rowDirectionCard={card} />
+      {docs.map((doc: News) => (
+        <RowDirectionCard key={uuid4()} rowDirectionCard={doc} />
       ))}
     </Sc.Container>
   );

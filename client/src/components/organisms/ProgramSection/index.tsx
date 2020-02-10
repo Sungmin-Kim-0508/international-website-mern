@@ -4,10 +4,12 @@ import { Typography, ProgramGrid } from "components";
 import { programLabels } from "commons/__types__";
 
 type ProgramSectionProps = {
-  labels: programLabels[];
+  programLabels: programLabels[];
 };
 
-function ProgramSection({ labels }: ProgramSectionProps): React.ReactElement {
+function ProgramSection({
+  programLabels
+}: ProgramSectionProps): React.ReactElement {
   return (
     <Sc.Container>
       <Sc.TitleWrapper>
@@ -16,7 +18,7 @@ function ProgramSection({ labels }: ProgramSectionProps): React.ReactElement {
         </Typography>
       </Sc.TitleWrapper>
       <Sc.ProgramGridWrapper>
-        <ProgramGrid labels={labels} />
+        <ProgramGrid programLabels={programLabels} />
       </Sc.ProgramGridWrapper>
     </Sc.Container>
   );

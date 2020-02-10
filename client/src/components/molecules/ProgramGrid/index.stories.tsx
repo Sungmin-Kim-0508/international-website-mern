@@ -13,6 +13,6 @@ export default {
 
 export const index: React.FC = () => (
   <div style={{ backgroundColor: "gray" }}>
-    <ProgramGrid labels={labels} />;
+    <ProgramGrid programLabels={labels} />;
   </div>
 );

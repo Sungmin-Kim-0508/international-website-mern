@@ -8,6 +8,8 @@ import {
   voluInfos,
   notes
 } from "commons/__mock_json__";
+import { useSelector } from "react-redux";
+import { RootState } from "rootReducer";
 
 export default {
   title: "templates/Home",
@@ -17,12 +19,16 @@ export default {
   }
 };
 
-export const index: React.FC = () => (
-  <HomeTemplates
-    cards={cards}
-    labels={labels}
-    stuInfos={stuInfos}
-    voluInfos={voluInfos}
-    notes={notes}
-  />
-);
+export const index: React.FC = () => {
+  const { home } = useSelector((state: RootState) => state);
+
+  return (
+    <HomeTemplates
+      cards={home.news}
+      programLabels={labels}
+      stuInfos={stuInfos}
+      voluInfos={voluInfos}
+      notes={notes}
+    />
+  );
+};

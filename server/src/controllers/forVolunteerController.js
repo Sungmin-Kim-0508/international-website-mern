@@ -1,6 +1,7 @@
 import VolunteerFile from "../model/VolunteerFile";
 import User from "../model/User";
-import path from "path";
+import { GCPuploadFile, GCPdeleteFile } from "../../src/utils/gcp_config";
+import { genFileUrl } from "../../src/utils/directory_manu";
 
 export const getFilesListVolunteers = async (req, res) => {
   try {
@@ -37,38 +38,31 @@ export const getFilesPagination = async (req, res) => {
   }
 };
 
-export const postFileUploadVolunteers = (req, res) => {
+export const postFileUploadVolunteers = async (req, res) => {
   if (req.files === null) {
     return res.status(400).json({ msg: "No file uploaded" });
   }
 
   const { fileName, description, _id } = req.body;
 
-  // In req.files.file, 'file' pertains to formData.append('file')
-  const file = req.files.file;
-  /**
-   *  Reference : https://stackoverflow.com/questions/680929/how-to-extract-extension-from-filename-string-in-javascript
-   * 
-   * (?:         # begin non-capturing group
-      \.         # a dot
-      (          # begin capturing group (captures the actual extension)
-      [^.]+      # anything except a dot, multiple times
-      )          # end capturing group
-      )?         # end non-capturing group, make it optional
-      $          # anchor to the end of the string
-   */
-  const extensionRegx = /(?:\.([^.]+))?$/;
-  const extension = extensionRegx.exec(file.name)[1];
-  const timestamp = Date.now();
-  const storagePath = path.join(__dirname, "..", "uploadTest", "uploads");
-  const fileUrl = `${storagePath}\\${fileName}_${timestamp}.${extension}`;
-  file.mv(`${fileUrl}`, async err => {
+  // In req.files.volunteerFile, 'volunteerFile' pertains to formData.append('volunteerFile', file) on React.js Side
+  const { volunteerFile } = req.files;
+
+  const storagePath = `uploads/volunteerFiles/`;
+  const fileUrl = genFileUrl(volunteerFile, fileName, storagePath);
+  volunteerFile.mv(`${fileUrl}`, async err => {
     if (err) {
       console.error(err);
       return res.status(500).send(err);
     }
 
     try {
+      const { isUploaded, msg } = GCPuploadFile(volunteerFile, fileUrl);
+      // if (!isUploaded) {
+      //   return res.json({
+      //     msg
+      //   });
+      // }
       const user = await User.findById(_id).select("-password");
       const newFile = await VolunteerFile.create({
         fileUrl,
@@ -94,6 +88,8 @@ export const postDeleteFileVolunteers = async (req, res) => {
   try {
     const user = await User.findById(userId).select("-password");
     user.volunteerFiles.pull(id);
+    const { fileUrl } = await VolunteerFile.findById(id);
+    GCPdeleteFile(fileUrl);
     await VolunteerFile.findOneAndDelete({ _id: id });
     user.save();
     res.end();

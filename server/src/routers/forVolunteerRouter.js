@@ -25,13 +25,13 @@ forVolunteerRouter.get(routes.volunteerPage, getFilesPagination);
 
 /**
  *  METHOD: POST
- *  Routes: "/forStudents/upload"
+ *  Routes: "/forVolunteers/upload"
  */
 forVolunteerRouter.post(routes.upload, postFileUploadVolunteers);
 
 /**
  *  METHOD: POST
- *  Routes: /forStudents/:id/delete-volunteers
+ *  Routes: /forVolunteers/:id/delete-volunteers
  */
 
 forVolunteerRouter.post(routes.deleteVolunteers, postDeleteFileVolunteers);

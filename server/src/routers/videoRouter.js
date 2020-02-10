@@ -12,7 +12,6 @@ import {
   postDeleteVideo,
   getDeleteVideo
 } from "../controllers/videoController";
-import { uploadVideo } from "../middleware";
 
 const videoRouter = express.Router();
 
@@ -20,7 +19,7 @@ videoRouter.get(routes.home, videos);
 
 // Upload
 videoRouter.get(routes.upload, getUpload);
-videoRouter.post(routes.upload, uploadVideo, postUpload);
+videoRouter.post(routes.upload, postUpload);
 
 // Detail
 videoRouter.get(routes.videoDetail, videoDetail);

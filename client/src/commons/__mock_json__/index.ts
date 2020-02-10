@@ -6,7 +6,6 @@ import {
 } from "commons/__types__";
 import {
   COLUMN_CARD_TITLE,
-  COLUMN_CARD_LOCATION,
   COLUMN_CARD_DATE,
   COLUMN_CARD_BODY
 } from "commons/string";

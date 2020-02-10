@@ -138,7 +138,7 @@ export const getUserInfo = (req, res) => {
 
 /**
  *  METHOD        : POST
- *  URL           : /oauth/google
+ *  URL           : /auth/google
  *  DESCRIPTION   : Use react-google-login to get the google authentication information.
  */
 
@@ -194,7 +194,7 @@ export const postGoogleLogin = async (req, res) => {
 
 /**
  *  METHOD        : POST
- *  URL           : /oauth/facebook
+ *  URL           : /auth/facebook
  *  DESCRIPTION   : Use react-facebook-login to get the facebook authentication information.
  *  REQUEST BODY  : {email, id, name, imageUrl}
  */
@@ -305,17 +305,6 @@ export const postForgetPassword = async (req, res) => {
     res.status(500).send(`Internal Server Error: ${error} `);
   }
 };
-
-export const oauthGoogleCallback = (accessToken, refreshToken, profile, cb) => {
-  console.log("access token", accessToken);
-  console.log("refresh token", refreshToken);
-  console.log("profile", profile);
-  console.log("cb", cb);
-};
-
-export const oauthGoogleLogin = passport.authenticate("google", {
-  scope: ["profile"]
-});
 
 export const getUnauthorized = (req, res) => {
   console.log("unauthroized access");

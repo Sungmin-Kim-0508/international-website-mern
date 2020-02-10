@@ -4,11 +4,13 @@ import { Typography, Paragraph } from "components";
 import { programLabels } from "commons/__types__";
 
 type ProgramLabelsProps = {
-  label: programLabels;
+  programLabel: programLabels;
 };
 
-function ProgramLabels({ label }: ProgramLabelsProps): React.ReactElement {
-  const { title, content } = label;
+function ProgramLabels({
+  programLabel
+}: ProgramLabelsProps): React.ReactElement {
+  const { title, content } = programLabel;
   return (
     <Sc.Container>
       <Typography styleType="h4" color="secondary">

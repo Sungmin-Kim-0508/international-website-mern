@@ -9,19 +9,14 @@ import {
   NewsSection,
   ProgramSection
 } from "components";
-import {
-  note,
-  information,
-  rowDirectionCard,
-  programLabels
-} from "commons/__types__";
+import { note, information, programLabels, NewsState } from "commons/__types__";
 
 interface HomeTemplateProps {
   notes: note[];
   stuInfos: information[];
   voluInfos: information[];
-  cards: rowDirectionCard[];
-  labels: programLabels[];
+  cards: NewsState;
+  programLabels: programLabels[];
 }
 
 function HomeTemplate({
@@ -29,15 +24,15 @@ function HomeTemplate({
   stuInfos,
   voluInfos,
   cards,
-  labels
+  programLabels
 }: HomeTemplateProps): React.ReactElement {
   return (
     <>
       <Header />
       <GreetingSection />
       <AboutSection />
-      <ProgramSection labels={labels} />
-      <EventsSection notes={notes} />
+      <ProgramSection programLabels={programLabels} />
+      {/* <EventsSection notes={notes} /> */}
       <NewsSection cards={cards} />
       <InformationSection stuInfos={stuInfos} voluInfos={voluInfos} />
       <ContactSection />

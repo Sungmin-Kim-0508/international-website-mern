@@ -1,7 +1,7 @@
 import React from "react";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { withKnobs } from "@storybook/addon-knobs";
 import RowDirectionCard from ".";
-import { rowDirectionCard } from "commons/__types__";
+import { News } from "commons/__types__";
 
 export default {
   title: "molecules/RowDirectionCard",
@@ -11,10 +11,26 @@ export default {
   }
 };
 
-const card: rowDirectionCard = {
-  src: `${process.env.PUBLIC_URL}/img/focus_dinner.jpg`,
-  alt: "focus_dinner",
-  to: "/sdfui29jr234rs0gsd21fwej12"
+const card: News = {
+  views: 0,
+  createdAt: new Date(),
+  newsComments: [],
+  _id: "",
+  title: "Eat your breakfast",
+  description: "<p>Time is up</p>",
+  creator: {
+    admin: true,
+    newsComments: [],
+    news: [],
+    studentFiles: [],
+    volunteerFiles: [],
+    _id: "",
+    name: "Kim Eddie",
+    email: "",
+    googleId: 0,
+    avatarUrl: "",
+    register_date: new Date()
+  }
 };
 
 export const index: React.FC = () => {

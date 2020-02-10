@@ -19,6 +19,6 @@ const label: programLabels = {
 
 export const index: React.FC = () => (
   <div style={{ backgroundColor: "gray  " }}>
-    <ProgramLabels label={label} />;
+    <ProgramLabels programLabel={label} />;
   </div>
 );

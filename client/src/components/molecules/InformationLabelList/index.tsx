@@ -2,6 +2,7 @@ import React from "react";
 import * as Sc from "./style";
 import { InformationLabel } from "components";
 import { information } from "commons/__types__";
+import uuid4 from "uuid4";
 
 type InformationLabelListProps = {
   infos: information[];
@@ -13,7 +14,7 @@ function InformationLabelList({
   return (
     <Sc.Container>
       {infos.map(info => (
-        <InformationLabel title={info.title} date={info.date} />
+        <InformationLabel key={uuid4()} title={info.title} date={info.date} />
       ))}
     </Sc.Container>
   );

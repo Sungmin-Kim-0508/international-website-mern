@@ -18,6 +18,10 @@ const newsRouter = express.Router();
 
 newsRouter.get(routes.home, newsHome);
 
+/**
+ *  METHOD:     GET
+ *  ROUTE:      /news/news-page
+ */
 newsRouter.get(routes.newsPage, getNewsPagination);
 
 // Search

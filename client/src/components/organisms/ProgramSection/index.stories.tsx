@@ -29,4 +29,4 @@ const labels: programLabels[] = [
   }
 ];
 
-export const index: React.FC = () => <ProgramSection labels={labels} />;
+export const index: React.FC = () => <ProgramSection programLabels={labels} />;

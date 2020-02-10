@@ -5,14 +5,7 @@ export const Dropdown = styled.li.attrs({
   className: "nav-item dropdown"
 })``;
 
-export const DropDown = styled.a.attrs({
-  className: "nav-link dropdown-toggle",
-  ["data-toggle"]: "dropdown",
-  role: "button",
-  href: "",
-  ["aria-haspopup"]: "true",
-  ["aria-expanded"]: "false"
-})`
+export const DropDown = styled.a.attrs({})`
   color: #373a3c;
 
   :hover {

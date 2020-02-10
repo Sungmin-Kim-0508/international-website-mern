@@ -1,20 +1,5 @@
 import User from "./model/User";
-import multer from "multer";
-const jwt = require("jsonwebtoken");
-
-const multerVideo = multer({ dest: "uploads/videos/" });
-
-export const uploadVideo = multerVideo.single("videoFile");
-
-// const gc = new Storage({
-//   keyFilename: path.join(
-//     __dirname,
-//     "./international-website-mern-5ca9fba931ea.json"
-//   ),
-//   projectId: "international-website-mern"
-// });
-
-// gc.getBuckets().
+import jwt from "jsonwebtoken";
 
 export const privateAuth = (req, res, next) => {
   const token = req.header("x-auth-token");
