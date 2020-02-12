@@ -8,7 +8,7 @@ type StyledAnchorProps = {
 export const StyledAnchor = styled(Link)<StyledAnchorProps>`
   color: ${props => {
     if (props.color === "primary") return "#000000";
-    else if (props.color === "secondary") return "#fff200";
+    else if (props.color === "secondary") return "#ffd615";
     else if (props.color === "white") return "#ffffff";
     else if (props.color === "gray") return "#718093";
     else return "#000000";

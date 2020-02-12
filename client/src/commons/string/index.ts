@@ -35,3 +35,24 @@ export const EMAIL_ADDRESS = "Email Address";
 export const EMAIL = "email@email.com";
 export const WEBSITE = "Webiste";
 export const WEBSITE_ADDRESS = "www.abc.com"; //"http://www.internationalstudentslondon.org/"
+
+/**
+ *  Sign In Page
+ */
+export const SIGN_IN_TO_ISMC = "Sign in to ISMC";
+export const USING_YOUR_ACCOUNT = "using your account";
+export const YOU_DONT_HAVE_ACCOUNT = "You don't have account?";
+export const TEXT_SIGN_IN = "Sign In";
+export const TEXT_SIGN_IN_WITH_GOOGLE = "Sign In with Google";
+export const PLACEHOLDER_EMAIL = "Email";
+export const PLACEHOLDER_PW = "Password";
+
+/**
+ *  Sign Up Page
+ */
+export const SIGN_UP_FOR_ISMC = "Sign Up for ISMC";
+export const CREATE_ISMC_EMAIL_ADDRESS = "Create a ISMC email address";
+export const ALREADY_HAVE_AN_ACCOUNT = "Already have an account?";
+export const TEXT_SIGN_UP = "Sign Up";
+export const PLACEHOLDER_FULL_NAME = "Full Name";
+export const PLACEHOLDER_CONFIRM_PW = "Confirm Password";

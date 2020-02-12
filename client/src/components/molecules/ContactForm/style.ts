@@ -16,7 +16,9 @@ export const FormWrapper = styled.section`
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 0.5rem;
+  border-radius: 5px;
+  padding: 2rem;
+  column-gap: 1rem;
 
   /* Mobile */
   @media screen and (max-width: 740px) {

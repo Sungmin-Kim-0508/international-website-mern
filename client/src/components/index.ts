@@ -25,6 +25,10 @@ export { default as RowDirectionCard } from "./molecules/RowDirectionCard";
 export { default as RowCardGrid } from "./molecules/RowCardGrid";
 export { default as ProgramLabels } from "./molecules/ProgramLabels";
 export { default as ProgramGrid } from "./molecules/ProgramGrid";
+export { default as SignInInputs } from "./molecules/SignInInputs";
+export { default as SignInLabels } from "./molecules/SignInLabels";
+export { default as SignUpInputs } from "./molecules/SignUpInputs";
+export { default as SignUpLabels } from "./molecules/SignUpLabels";
 
 // organisms
 export { default as AboutSection } from "./organisms/AboutSection";

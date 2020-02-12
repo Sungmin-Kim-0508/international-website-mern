@@ -1,7 +1,8 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import { Home } from "pages";
+import { Home, SignIn } from "pages";
 import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "commons/router";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -14,9 +15,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <GlobalStyle />
-      <Router>
-        <Home />
-      </Router>
+      <Routes />
     </div>
   );
 };

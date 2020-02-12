@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 const themeFunc = props => {
-  if (props.theme === "primary") return "#fff200";
+  if (props.theme === "primary") return "#ffd615";
   else if (props.theme === "danger") return "#C70000";
   else if (props.theme === "success") return "#00C2FF";
 };
@@ -17,6 +17,11 @@ const bootstrapBtn = props => {
   if (props.theme === "primary") return "primary";
   else if (props.theme === "danger") return "danger";
   else if (props.theme === "success") return "success";
+};
+
+type WidthHeightProps = {
+  width: string;
+  height: string;
 };
 
 const BtnStyle = css`

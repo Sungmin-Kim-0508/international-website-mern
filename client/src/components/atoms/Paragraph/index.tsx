@@ -3,7 +3,7 @@ import * as Sc from "./style";
 
 type ParagraphProps = {
   /** Font Color */
-  color: "black" | "white" | "gray" | string;
+  color: "black" | "white" | "gray" | "light-green" | string;
   textAlign?: "left" | "right" | "center" | "justify" | "inherit";
 };
 

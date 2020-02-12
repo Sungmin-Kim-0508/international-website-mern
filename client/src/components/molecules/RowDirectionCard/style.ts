@@ -7,7 +7,7 @@ export const LinkWrapper = styled(Link)`
   grid-template-rows: 1fr 0.6fr;
 
   &:hover {
-    background-color: #fff200;
+    background-color: #ffd615;
     text-decoration: none;
   }
 `;

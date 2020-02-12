@@ -8,13 +8,13 @@ function ContactSection({}: ContactFormProps): React.ReactElement {
   return (
     <Sc.Container>
       <ContactForm />
-      <Sc.ImgWrapper>
+      {/* <Sc.ImgWrapper>
         <Img
           src={`${process.env.PUBLIC_URL}/img/we_like_you.jpg`}
           alt="unsplash we-like-you"
           objectFit="fill"
         />
-      </Sc.ImgWrapper>
+      </Sc.ImgWrapper> */}
     </Sc.Container>
   );
 }

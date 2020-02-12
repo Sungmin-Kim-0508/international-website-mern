@@ -1,4 +1,4 @@
-const HOME = "/home";
+const HOME = "/";
 const ABOUT = "/about";
 const NEWS = "/news";
 const SEARCH = "/search";

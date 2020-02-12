@@ -9,7 +9,7 @@ export const DropDown = styled.a.attrs({})`
   color: #373a3c;
 
   :hover {
-    color: #fff200;
+    color: #ffd615;
   }
 `;
 

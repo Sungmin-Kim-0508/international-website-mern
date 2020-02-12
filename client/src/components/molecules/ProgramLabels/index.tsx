@@ -16,7 +16,7 @@ function ProgramLabels({
       <Typography styleType="h4" color="secondary">
         {title}
       </Typography>
-      <Paragraph color="white" textAlign="left">
+      <Paragraph color="light-green" textAlign="left">
         {content}
       </Paragraph>
     </Sc.Container>

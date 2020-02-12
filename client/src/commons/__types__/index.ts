@@ -22,23 +22,25 @@ export type information = {
   date: string;
 };
 
+export type UserInfo = {
+  admin: boolean;
+  newsComments: [];
+  news: [];
+  studentFiles: [];
+  volunteerFiles: [];
+  _id: string;
+  name: string;
+  email: string;
+  googleId: Number;
+  avatarUrl: string;
+  register_date: Date;
+};
+
 export type News = {
   _id: string;
   title: string;
   description: string;
-  creator: {
-    admin: boolean;
-    newsComments: [];
-    news: [];
-    studentFiles: [];
-    volunteerFiles: [];
-    _id: string;
-    name: string;
-    email: string;
-    googleId: Number;
-    avatarUrl: string;
-    register_date: Date;
-  };
+  creator: UserInfo;
   views: Number;
   createdAt: Date;
   newsComments: [];
@@ -76,4 +78,11 @@ export type ForVolunteersState = {
   msg: string;
   fileList: [];
   paginationOptions: {};
+};
+
+export type UserState = {
+  token: string;
+  isAuthenciated: boolean;
+  isLoading: boolean;
+  user: UserInfo | null;
 };

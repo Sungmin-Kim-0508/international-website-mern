@@ -3,9 +3,10 @@ import styled, { css, ThemedStyledProps } from "styled-components";
 interface TypographyStyleProps {
   styleType: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   textAlign: "left" | "right" | "center" | "justify" | "inherit";
+  color: "primary" | "secondary" | "white" | "gray";
   isItalic?: boolean;
   isBold?: boolean;
-  color: "primary" | "secondary" | "white" | "gray";
+  isGeorgiaFont?: boolean;
 }
 
 export const styleTypeFunc = (
@@ -38,16 +39,19 @@ export const styleTypeFunc = (
   }
 };
 
+const styleColor = (props: ThemedStyledProps<TypographyStyleProps, any>) => {
+  if (props.color === "primary") return "#000000";
+  else if (props.color === "secondary") return "#ffd615";
+  else if (props.color === "white") return "#ffffff";
+  else if (props.color === "gray") return "#718093";
+  else return "#000000";
+};
+
 export const TypographyStyle = styled.span<TypographyStyleProps>`
   font-style: ${props => (props.isItalic ? "italic" : "normal")};
   font-weight: ${props => (props.isBold ? "bold" : "normal")};
-  color: ${props => {
-    if (props.color === "primary") return "#000000";
-    else if (props.color === "secondary") return "#fff200";
-    else if (props.color === "white") return "#ffffff";
-    else if (props.color === "gray") return "#718093";
-    else return "#000000";
-  }};
+  font-family: ${props => (props.isGeorgiaFont ? `Lora", Georgia, serif` : "")};
+  color: ${styleColor};
   ${styleTypeFunc};
   line-height: 1.2;
   text-align: ${props => props.textAlign};

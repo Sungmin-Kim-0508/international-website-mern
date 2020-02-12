@@ -4,7 +4,6 @@ import {
   ContactSection,
   EventsSection,
   GreetingSection,
-  Header,
   InformationSection,
   NewsSection,
   ProgramSection
@@ -20,7 +19,6 @@ interface HomeTemplateProps {
 }
 
 function HomeTemplate({
-  notes,
   stuInfos,
   voluInfos,
   cards,
@@ -28,7 +26,6 @@ function HomeTemplate({
 }: HomeTemplateProps): React.ReactElement {
   return (
     <>
-      <Header />
       <GreetingSection />
       <AboutSection />
       <ProgramSection programLabels={programLabels} />

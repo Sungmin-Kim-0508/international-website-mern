@@ -13,7 +13,7 @@ const ContactLabels: React.FC<ContactLabelProps> = ({ note }) => {
       <Typography styleType="h4" color="primary">
         {title}
       </Typography>
-      <Typography styleType="h4" color="secondary">
+      <Typography styleType="h5" color="gray">
         {content}
       </Typography>
     </Sc.Row>

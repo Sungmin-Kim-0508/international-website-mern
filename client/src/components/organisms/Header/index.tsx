@@ -16,6 +16,8 @@ class Header extends React.Component<HeaderProps, {}> {
         <NavItem to={routes.forStudents}>For Students</NavItem>
         <NavItem to={routes.forVolunteers}>For Volunteer</NavItem>
         <NavItem to={routes.contact}>Contact</NavItem>
+        <NavItem to={routes.signIn}>Sign In</NavItem>
+        <NavItem to={routes.signUp}>Sign Up</NavItem>
       </Menu>
     );
   }
