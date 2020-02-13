@@ -17,7 +17,6 @@ const Button: React.FC<ButtonProps> = ({
   children,
   theme,
   to,
-
   href,
   onClick
 }) => {

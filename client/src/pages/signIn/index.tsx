@@ -19,7 +19,6 @@ export default function SignInPage(): React.ReactElement {
     response: GoogleLoginResponse | GoogleLoginResponseOffline
   ) => {
     const { profileObj } = response as GoogleLoginResponse;
-    console.log(profileObj);
     dispatch(googleLogin(profileObj));
   };
 

@@ -1,6 +1,7 @@
 import { createAction } from "typesafe-actions";
 import { UserState } from "commons/__types__";
 import { responseGoogleFail } from ".";
+import { USER_SIGN_OUT } from "pages/header/action";
 
 export const AUTH_GOOGLE = "signIn/AUTH_GOOGLE";
 export const GOOGLE_LOGIN_ERROR = "signIn/GOOGLE_LOGIN_ERROR";
@@ -21,3 +22,4 @@ export const authGoogle = createAction(AUTH_GOOGLE)<UserState>();
 export const googleLoginError = createAction(GOOGLE_LOGIN_ERROR)<
   responseGoogleFail
 >();
+export const userSignOut = createAction(USER_SIGN_OUT)<UserState>();

@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import routes from "commons/__routes__";
-import { Header } from "components";
-import { Home, SignIn, SignUp } from "pages";
+import { Home, SignIn, SignUp, Header } from "pages";
+import { UserState } from "commons/__types__";
 
-export default () => (
+export default (): React.ReactElement => (
   <Router>
     <Header />
     <Switch>

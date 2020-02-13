@@ -1,7 +1,5 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import { Home, SignIn } from "pages";
-import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "commons/router";
 
 const GlobalStyle = createGlobalStyle`

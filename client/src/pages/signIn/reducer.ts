@@ -7,12 +7,14 @@ import {
   USER_LOADED,
   GOOGLE_LOGIN_ERROR
 } from "./actions";
+import { defaultUserInfo, defaultUserState } from "commons/defaultState";
+import { USER_SIGN_OUT } from "pages/header/action";
 
 const initialState: UserState = {
   isAuthenciated: false,
   isLoading: false,
   token: "",
-  user: null,
+  user: defaultUserInfo,
   msg: ""
 };
 
@@ -21,7 +23,7 @@ const signIn = createReducer<UserState, SignInAction>(initialState, {
     isAuthenciated: false,
     isLoading: true,
     token: "",
-    user: null,
+    user: defaultUserInfo,
     msg: "Login Processing..."
   }),
   [USER_LOADED]: (_, { payload: { user } }) => ({
@@ -48,9 +50,13 @@ const signIn = createReducer<UserState, SignInAction>(initialState, {
       isAuthenciated: false,
       isLoading: false,
       token: "",
-      user: null,
+      user: defaultUserInfo,
       msg: `${details} - ${error}`
     };
+  },
+  [USER_SIGN_OUT]: () => {
+    localStorage.removeItem("token");
+    return defaultUserState;
   }
 });
 

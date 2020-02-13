@@ -1,4 +1,6 @@
-export const styles = {
+import styled from "styled-components";
+
+export const menuStyles = {
   bmBurgerButton: {
     position: "fixed",
     width: "36px",
@@ -28,9 +30,13 @@ export const styles = {
     height: "100%",
     width: "230px"
   },
+  /**
+   *  Menu Wrapper styles
+   */
   bmMenu: {
     background: "#373a47",
-    padding: "2.5em 1.5em 0",
+    // padding: "2.5em 1.5em 0",
+    padding: 0,
     fontSize: "1.15em"
   },
   bmMorphShape: {
@@ -40,11 +46,30 @@ export const styles = {
     padding: "0.8em",
     listStyle: "none"
   },
-  bmItem: {
-    // display: "grid",
-    // rowGap: "1rem"
-  },
+  bmItem: {},
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)"
   }
 };
+
+export const ProfileWrapper = styled.div`
+  display: grid;
+  width: 150px;
+  grid-auto-flow: column;
+  column-gap: 10px;
+  justify-content: left;
+  margin-bottom: 2rem; /** distance between Profile and item-list */
+`;
+
+export const ItemsWrapper = styled.div`
+  margin-left: 10px; /** distance between left of screen and item-list */
+`;
+
+export const AvatarWrapper = styled.section`
+  width: 3rem;
+  height: 3rem;
+`;
+
+export const TypographyWrapper = styled.section`
+  padding: 10px 0;
+`;

@@ -2,7 +2,9 @@
 import {
   NewsState,
   ForStudentsState,
-  ForVolunteersState
+  ForVolunteersState,
+  UserState,
+  UserInfo
 } from "commons/__types__";
 
 export const defaultNews: NewsState = {
@@ -36,4 +38,26 @@ export const defaultForVolunteers: ForVolunteersState = {
   msg: "",
   fileList: [],
   paginationOptions: {}
+};
+
+export const defaultUserInfo: UserInfo = {
+  admin: false,
+  newsComments: [],
+  news: [],
+  studentFiles: [],
+  volunteerFiles: [],
+  _id: "",
+  name: "",
+  email: "",
+  googleId: 0,
+  avatarUrl: "",
+  register_date: new Date()
+};
+
+export const defaultUserState: UserState = {
+  token: "",
+  isAuthenciated: false,
+  isLoading: false,
+  user: defaultUserInfo,
+  msg: ""
 };

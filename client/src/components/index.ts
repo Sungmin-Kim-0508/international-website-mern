@@ -1,6 +1,7 @@
 // atoms
 export { default as Anchor } from "./atoms/Anchor";
 export { default as Button } from "./atoms/Button";
+export { default as Circle } from "./atoms/Circle";
 export { default as Input } from "./atoms/Input";
 export { default as LabelDate } from "./atoms/LabelDate";
 export { default as Img } from "./atoms/Img";
