@@ -81,8 +81,9 @@ export type ForVolunteersState = {
 };
 
 export type UserState = {
-  token: string;
+  token: string | null;
   isAuthenciated: boolean;
   isLoading: boolean;
   user: UserInfo | null;
+  msg: string | "";
 };

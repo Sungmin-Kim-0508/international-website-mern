@@ -12915,6 +12915,14 @@ react-focus-lock@^2.1.0:
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
 
+react-google-login@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-5.1.0.tgz#ed9f1069310419dfe263ffcab986a246140752b7"
+  integrity sha512-G5sh6EWJbQxk2hAel0EUB6r1Nyz9BRW/fEyCHV8g108l37/k/ctXDi4I3v1NCYzGN8SQFWq1I2l4mqMkxIVHLQ==
+  dependencies:
+    "@types/react" "*"
+    prop-types "^15.6.0"
+
 react-helmet-async@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/react-helmet-async/-/react-helmet-async-1.0.4.tgz#079ef10b7fefcaee6240fefd150711e62463cc97"

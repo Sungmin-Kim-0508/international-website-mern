@@ -1,6 +1,6 @@
 import newsApi from "commons/apis/NewsApi";
 import { newsLoaded, newsLoading, newsPaginationLoaded } from "../actions";
-import { returnErros } from "../../../rootReducer";
+import { returnErrors } from "../../../rootReducer";
 
 // const content = useSelector(state => state);
 
@@ -15,7 +15,7 @@ export function loadNews() {
     } catch (error) {
       error.response === undefined
         ? console.error(error)
-        : dispatch(returnErros(error.response));
+        : dispatch(returnErrors(error.response));
     }
   };
 }
@@ -40,7 +40,7 @@ export function loadPaginatedNews(pages = 1, limit = 3) {
     } catch (error) {
       error.response === undefined
         ? console.error(error)
-        : dispatch(returnErros(error.response));
+        : dispatch(returnErrors(error.response));
     }
   };
 }

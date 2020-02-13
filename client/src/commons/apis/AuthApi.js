@@ -1,5 +1,5 @@
 import axios from "axios";
-import urls from "../components/urls";
+import routes from "commons/__routes__";
 import {
   IS_PRODUCTION,
   PRODUCTION_URL,
@@ -7,12 +7,12 @@ import {
 } from "./production_config";
 
 const api = axios.create({
-  baseURL: IS_PRODUCTION ? PRODUCTION_URL : `${DEVELOPMENT_URL}${urls.NEWS}`
+  baseURL: IS_PRODUCTION ? `${PRODUCTION_URL}` : `${DEVELOPMENT_URL}`
 });
 
 const authApi = {
   signUp: (name, email, password, password2) => {
-    return api.post(urls.SIGN_UP, {
+    return api.post(routes.signUp, {
       name,
       email,
       password,
@@ -20,32 +20,32 @@ const authApi = {
     });
   },
   signIn: (email, password) => {
-    return api.post(`${urls.SIGN_IN}`, {
+    return api.post(`${routes.signIn}`, {
       email,
       password
     });
   },
   googleLogin: profileObj => {
-    return api.post(`${urls.AUTH_GOOGLE}`, {
+    return api.post(`${routes.auth_google}`, {
       profileObj
     });
   },
-  facebookLogin: profileObj => {
-    return api.post(urls.AUTH_FACEBOOK, { profileObj });
-  },
+  // facebookLogin: profileObj => {
+  //   return api.post(routes.AUTH_FACEBOOK, { profileObj });
+  // },
   forgetPassword: email => {
-    return api.post(`users${urls.FORGET_PASSWORD}`, { email });
+    return api.post(`users${routes.FORGET_PASSWORD}`, { email });
   },
   editProfile: (avatarUrl, name, email, id, tokenConfig) => {
     const { headers } = tokenConfig;
     return api.post(
-      `users/${id}${urls.EDIT_PROFILE}`,
+      `users/${id}${routes.EDIT_PROFILE}`,
       { avatarUrl, name, email },
       { headers }
     );
   },
   getUserInfo: headerConfig => {
-    return api.get(urls.USER_INFO, headerConfig);
+    return api.get(routes.USER_INFO, headerConfig);
   }
 };
 
