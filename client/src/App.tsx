@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { createGlobalStyle } from "styled-components";
 import Routes from "commons/router";
+import { loadUser } from "rootAction";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -10,6 +12,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App: React.FC = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadUser());
+  }, []);
+
   return (
     <div className="App">
       <GlobalStyle />

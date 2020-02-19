@@ -6,6 +6,10 @@ export const Container = styled.div`
   row-gap: 1rem;
   background-color: #f5f5f4;
   padding: 3rem;
+  border-radius: 5px;
+  @media screen and (max-width: 740px) {
+    padding: 0;
+  }
 `;
 
 export const ButtonWrapper = styled.section`

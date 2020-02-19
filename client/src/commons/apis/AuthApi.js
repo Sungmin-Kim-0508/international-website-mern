@@ -45,7 +45,7 @@ const authApi = {
     );
   },
   getUserInfo: headerConfig => {
-    return api.get(routes.USER_INFO, headerConfig);
+    return api.get(routes.userInfo, headerConfig);
   }
 };
 

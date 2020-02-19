@@ -6,7 +6,11 @@ export const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   column-gap: 4rem;
 
-  @media screen and (max-width: 780px) {
+  /* Tablet */
+  @media screen and (max-width: 1120px) {
+  }
+  /* Mobile  */
+  @media screen and (max-width: 740px) {
     grid-auto-flow: row;
     column-gap: unset;
     grid-template-columns: unset;

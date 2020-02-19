@@ -1,0 +1,59 @@
+.pagination {
+  justify-content: center;
+  height: 2.5rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.pagination > li {
+  margin-right: 1rem;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.pagination > li:hover {
+  background-color: #e9ecef;
+}
+
+.pagination > li {
+  width: 2.5rem;
+  height: 100%;
+  text-align: center;
+}
+
+.pagination > li > a {
+  color: #000000;
+  cursor: pointer;
+}
+
+.pagination > li.previous {
+}
+
+.pagination > li.previous > a {
+  color: #007bff;
+  width: 100%;
+  height: 100%;
+}
+
+.pagination > li.next {
+}
+
+/* Only digit of pagination */
+.pagination > li.next > a {
+  color: #007bff;
+}
+
+.pagination > li.disabled > a {
+  color: #757575;
+  text-decoration: none;
+  cursor: default;
+}
+
+.pagination > li.active {
+  background-color: #5668b0;
+}
+
+.pagination > .active > a {
+  color: #ffffff;
+}

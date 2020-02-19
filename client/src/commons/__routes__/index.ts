@@ -13,12 +13,16 @@ const NEWS_EDIT = `${NEWS}/edit-news`;
 const NEWS_DELETE = `${NEWS}/delete-news`;
 const NEWS_PAGE = "news-page";
 
+const USER_INFO = "/userInfo";
+
 const AUTH = "/auth";
 const AUTH_GOOGLE = `${AUTH}/google`;
+const AUTH_FACEBOOK = `${AUTH}/facebook`;
 
 export default {
   home: HOME,
   auth_google: AUTH_GOOGLE,
+  auth_facebook: AUTH_FACEBOOK,
   about: ABOUT,
   news: NEWS,
   forStudents: FOR_STUDENTS,
@@ -30,5 +34,6 @@ export default {
   search: SEARCH,
   newsEdit: NEWS_EDIT,
   newsDelete: NEWS_DELETE,
-  newsPage: NEWS_PAGE
+  newsPage: NEWS_PAGE,
+  userInfo: USER_INFO
 };

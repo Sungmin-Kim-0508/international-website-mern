@@ -18,7 +18,7 @@ export const Container = styled.div`
 
   /* Tablet */
   @media screen and (max-width: 1120px) {
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
   }
 
   /* Mobile */

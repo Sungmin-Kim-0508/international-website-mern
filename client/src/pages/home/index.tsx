@@ -5,9 +5,7 @@ import { loadPaginatedNews } from "./actionMethods";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../rootReducer";
 
-type HomePageProps = {};
-
-function HomePage({}: HomePageProps): React.ReactElement {
+function HomePage(): React.ReactElement {
   const { home } = useSelector((state: RootState) => state);
   const dispatch = useDispatch();
   useEffect(() => {

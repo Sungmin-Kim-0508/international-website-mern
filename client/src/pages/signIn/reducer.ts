@@ -13,29 +13,30 @@ import { USER_SIGN_OUT } from "pages/header/action";
 const initialState: UserState = {
   isAuthenciated: false,
   isLoading: false,
-  token: "",
+  token: localStorage.getItem("token"),
   user: defaultUserInfo,
   msg: ""
 };
 
 const signIn = createReducer<UserState, SignInAction>(initialState, {
   [USER_LOADING]: () => ({
-    isAuthenciated: false,
+    ...initialState,
     isLoading: true,
-    token: "",
     user: defaultUserInfo,
     msg: "Login Processing..."
   }),
-  [USER_LOADED]: (_, { payload: { user } }) => ({
-    isAuthenciated: true,
-    isLoading: false,
-    token: localStorage.getItem("token"),
-    user: user,
-    msg: "Successfully Login!"
-  }),
+  [USER_LOADED]: (_, { payload: { user } }) => {
+    return {
+      isAuthenciated: true,
+      isLoading: false,
+      token: localStorage.getItem("token"),
+      user: user,
+      msg: "Successfully Login!"
+    };
+  },
   [AUTH_GOOGLE]: (_, { payload: { user, token } }) => {
+    /* localStorage.setItem("token", token as string); */
     localStorage.setItem("token", <string>token);
-    // localStorage.setItem("token", token as string);
     return {
       isAuthenciated: true,
       isLoading: false,
