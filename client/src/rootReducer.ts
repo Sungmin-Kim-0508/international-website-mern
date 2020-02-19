@@ -2,10 +2,12 @@ import { combineReducers } from "redux";
 import { createAction } from "typesafe-actions";
 import homeReducer from "pages/home/reducer";
 import signInReducer from "pages/signIn/reducer";
+import newsDetailReducer from "pages/newsDetail/reducer";
 
 const rootReducer = combineReducers({
   home: homeReducer,
-  signIn: signInReducer
+  signIn: signInReducer,
+  newsDetail: newsDetailReducer
 });
 
 export default rootReducer;

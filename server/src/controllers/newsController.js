@@ -81,10 +81,23 @@ export const newsDetail = async (req, res) => {
       title,
       views
     } = await News.findById(id).populate("creator");
+    const defaultUserInfo = {
+      admin: false,
+      newsComments: [],
+      news: [],
+      studentFiles: [],
+      volunteerFiles: [],
+      _id: "",
+      name: "",
+      email: "",
+      googleId: 0,
+      avatarUrl: "",
+      register_date: new Date()
+    };
     const newsDetail = {
       _id,
       createdAt,
-      creator: creator ? creator.name : "Removed User",
+      creator: creator ? creator : defaultUserInfo,
       description,
       newsComments,
       title,

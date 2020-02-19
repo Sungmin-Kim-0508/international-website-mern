@@ -14,7 +14,7 @@ function RowDirectionCard({
 }: RowDirectionCardProps): React.ReactElement {
   const { _id, title, creator, createdAt } = rowDirectionCard;
   return (
-    <Sc.LinkWrapper to={_id}>
+    <Sc.LinkWrapper to={`news/${_id}`}>
       <Sc.ImgWrapper>
         <Img
           alt="img"

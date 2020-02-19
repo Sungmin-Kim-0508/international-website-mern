@@ -5,7 +5,6 @@ import {
   defaultForStudents,
   defaultForVolunteers
 } from "commons/defaultState";
-import { News } from "commons/__types__";
 import { HomeState } from "./types";
 import {
   NEWS_LOADING,
@@ -14,7 +13,6 @@ import {
   NEWS_LOADED,
   NEWS_PAGINATION_LOADED,
   NEWS_SEARCHED,
-  NEWS_DETAIL,
   UPLOAD_NEWS,
   EDIT_NEWS,
   DELETE_NEWS

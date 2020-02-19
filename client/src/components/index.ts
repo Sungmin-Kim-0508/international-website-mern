@@ -9,6 +9,7 @@ export { default as NavBrand } from "./atoms/NavBrand";
 export { default as NavItem } from "./atoms/NavItem";
 export { default as Paginator } from "./atoms/Paginator";
 export { default as Paragraph } from "./atoms/Paragraph";
+export { default as Spinner } from "./atoms/Spinner";
 export { default as Typography } from "./atoms/Typography";
 export { default as TextArea } from "./atoms/TextArea";
 
@@ -23,6 +24,7 @@ export { default as ColumnDirectionCard } from "./molecules/ColumnDirectionCard"
 export { default as DropDownItems } from "./molecules/DropDownItems";
 export { default as InformationLabel } from "./molecules/InformationLabel";
 export { default as InformationLabelList } from "./molecules/InformationLabelList";
+export { default as NewsDetailTitle } from "./molecules/NewsDetailTitle";
 export { default as RowDirectionCard } from "./molecules/RowDirectionCard";
 export { default as RowCardGrid } from "./molecules/RowCardGrid";
 export { default as ProgramLabels } from "./molecules/ProgramLabels";
@@ -42,3 +44,4 @@ export { default as InformationSection } from "./organisms/InformationSection";
 export { default as NewsSection } from "./organisms/NewsSection";
 export { default as ProgramSection } from "./organisms/ProgramSection";
 export { default as NewsList } from "./organisms/NewsPage_NewsList";
+export { default as NewsDetail } from "./organisms/NewsDetail";

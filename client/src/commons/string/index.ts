@@ -56,3 +56,10 @@ export const ALREADY_HAVE_AN_ACCOUNT = "Already have an account?";
 export const TEXT_SIGN_UP = "Sign Up";
 export const PLACEHOLDER_FULL_NAME = "Full Name";
 export const PLACEHOLDER_CONFIRM_PW = "Confirm Password";
+
+/**
+ *  News Detail Page
+ */
+
+export const EDIT = "Edit";
+export const DELETE = "Delete";

@@ -4,7 +4,14 @@ import * as Sc from "./style";
 type AnchorProps = {
   to: string;
   children: React.ReactNode;
-  color?: "primary" | "secondary" | "white" | "gray" | "black";
+  color?:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "white"
+    | "gray"
+    | "black";
 };
 
 function Anchor({
