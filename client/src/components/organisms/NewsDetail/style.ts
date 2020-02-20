@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 5rem 15rem;
+  position: relative;
+  top: 5rem;
+  margin: 0 13rem;
+  padding: 2rem 5rem;
   font-family: Georgia;
+  border: 1px solid #d1d5da;
+  border-radius: 5px;
 `;

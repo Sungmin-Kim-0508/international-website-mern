@@ -15,7 +15,7 @@ function Header({ signIn, onSignOut }: HeaderProps): React.ReactElement {
   const { isAuthenciated } = signIn;
 
   return (
-    <Menu styles={Sc.menuStyles}>
+    <Menu styles={Sc.menuStyles} left>
       {isAuthenciated && <Profile avatarUrl={avatarUrl} name={name} />}
       <Sc.ItemsWrapper>
         <NavItem to={routes.home}>Home</NavItem>
