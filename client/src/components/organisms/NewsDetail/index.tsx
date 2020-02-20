@@ -18,7 +18,9 @@ function NewsDetail({ newsDetail }: NewsDetailProps): React.ReactElement {
   return (
     <Sc.Container>
       <NewsDetailTitle title={title} creatorName={name} createdAt={createdAt} />
-      <Paragraph color="black">{renderHTML(description)}</Paragraph>
+      <Paragraph color="black" textAlign="left">
+        {renderHTML(description)}
+      </Paragraph>
     </Sc.Container>
   );
 }

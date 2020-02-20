@@ -70,6 +70,7 @@
     "addon-redux": "^1.1.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-preset-react-app": "^9.1.0",
+    "cypress": "^4.0.2",
     "react-docgen-typescript-loader": "^3.6.0",
     "redux-devtools-extension": "^2.13.8",
     "storybook-addon-redux-listener": "^0.1.7",

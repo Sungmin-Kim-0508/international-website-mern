@@ -19,7 +19,9 @@ function NewsDetailTitle({
   return (
     <Sc.Container>
       <Sc.MainTitleWrapper>
-        <Typography styleType="h1">{title}</Typography>
+        <Typography styleType="h1" textAlign="center">
+          {title}
+        </Typography>
       </Sc.MainTitleWrapper>
       <Sc.SubTitleWrapper>
         <Sc.NameDateWarpper>
@@ -32,6 +34,7 @@ function NewsDetailTitle({
           <Anchor to={`${routes.news}/:id${routes.newsEdit}`} color="success">
             {EDIT}
           </Anchor>
+          <Typography styleType="h5">|</Typography>
           <Anchor to={`${routes.news}/:id${routes.newsDelete}`} color="danger">
             {DELETE}
           </Anchor>
