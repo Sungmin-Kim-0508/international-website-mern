@@ -8,6 +8,5 @@ The community website for newcomers in Canada using React + Redux with Typescrip
 - Back-End      : Express
 - Database      : MongoDB + Mongoose
 - Testing Tools : Storybook, Cypress
-- SCSS
 
 ## Why I introduce Atomic Design Pattern?
