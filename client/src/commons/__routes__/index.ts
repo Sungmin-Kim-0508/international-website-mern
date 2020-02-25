@@ -8,7 +8,7 @@ const CONTACT = "/contact";
 const SIGN_IN = "/signIn";
 const SIGN_UP = "/signUp";
 
-const NEWS_UPLOAD = `${NEWS}/upload-news`;
+const NEWS_UPLOAD = `/upload-news`;
 const NEWS_EDIT = `/edit-news`;
 const NEWS_DELETE = `/delete-news`;
 const NEWS_PAGE = "news-page";

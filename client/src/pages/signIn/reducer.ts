@@ -68,6 +68,7 @@ const signIn = createReducer<UserState, SignInAction>(initialState, {
     return defaultUserState;
   },
   [NO_TOKEN]: state => {
+    localStorage.removeItem("token");
     return {
       ...state,
       isAuthenciated: false,

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div.attrs({
+  className: "news-list-container"
+})`
   /* 
         padding is nested with molecules/RowCardGrid.
         So, the actual padding is 5rem. 
@@ -10,8 +12,10 @@ export const Container = styled.div`
 `;
 
 export const TitleWrapper = styled.section`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-content: left;
+  grid-template-columns: 1fr auto;
+  margin-bottom: 2rem;
 `;
 
 export const CardsWrapper = styled.section``;

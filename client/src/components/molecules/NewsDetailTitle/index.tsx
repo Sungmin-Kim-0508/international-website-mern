@@ -6,9 +6,10 @@ import { EDIT, DELETE, BACK } from "commons/string";
 import dayjs from "dayjs";
 
 type NewsDetailTitleProps = {
-  title: string;
-  creatorName: string;
-  createdAt: Date;
+  title?: string;
+  creatorName?: string;
+  createdAt?: Date;
+  isCreate?: boolean;
   isEdit?: boolean;
   titleRef?: React.RefObject<HTMLInputElement>;
   onEdit?: () => void;
@@ -17,9 +18,10 @@ type NewsDetailTitleProps = {
 };
 
 function NewsDetailTitle({
-  title,
+  title = "",
   creatorName,
   createdAt,
+  isCreate,
   isEdit,
   titleRef,
   onEdit,
@@ -28,17 +30,22 @@ function NewsDetailTitle({
 }: NewsDetailTitleProps): React.ReactElement {
   return (
     <Sc.Container>
+      {isCreate && (
+        <Sc.InputTitleWrapper>
+          <Input type="text" placeholder="Enter Title" inputRef={titleRef} />
+        </Sc.InputTitleWrapper>
+      )}
       {isEdit && (
-        <Sc.EditTitleWrapper>
+        <Sc.InputTitleWrapper>
           <Input
             defaultValue={title}
             placeholder="Enter Title"
             type="text"
             inputRef={titleRef}
           />
-        </Sc.EditTitleWrapper>
+        </Sc.InputTitleWrapper>
       )}
-      {!isEdit && (
+      {!isEdit && !isCreate && (
         <>
           <Sc.MainTitleWrapper>
             <Button theme="gray" onClick={onBack}>

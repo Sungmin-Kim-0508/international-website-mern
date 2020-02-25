@@ -43,6 +43,7 @@ export { default as EventsSection } from "./organisms/EventsSection";
 export { default as GreetingSection } from "./organisms/GreetingSection";
 export { default as Header } from "./organisms/Header";
 export { default as InformationSection } from "./organisms/InformationSection";
+export { default as NewsCreate } from "./organisms/NewsCreate";
 export { default as NewsSection } from "./organisms/NewsSection";
 export { default as ProgramSection } from "./organisms/ProgramSection";
 export { default as NewsList } from "./organisms/NewsPage_NewsList";

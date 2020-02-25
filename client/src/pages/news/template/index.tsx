@@ -5,15 +5,19 @@ import { NewsState } from "commons/__types__";
 type NewsTemplateProps = {
   cards: NewsState;
   onPageChange: (selectedItem: { selected: number }) => void;
+  onMoveCreateNews: () => void;
 };
 
 export default function NewsTemplate({
   cards,
-  onPageChange
+  onPageChange,
+  onMoveCreateNews
 }: NewsTemplateProps): React.ReactElement {
   return (
-    <div>
-      <NewsList cards={cards} onPageChange={onPageChange} />
-    </div>
+    <NewsList
+      cards={cards}
+      onPageChange={onPageChange}
+      onMoveCreateNews={onMoveCreateNews}
+    />
   );
 }

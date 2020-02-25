@@ -115,8 +115,16 @@ export const getUploadNews = (req, res) => res.send("upload news");
 export const postUploadNews = async (req, res) => {
   const { title, description, _id } = req.body;
   try {
-    if (title === "" || description === "") {
+    if (
+      title === "" ||
+      title === undefined ||
+      description === "" ||
+      description === undefined
+    ) {
       res.status(400).json({ msg: "Enter title or description" });
+    }
+    if (_id === undefined || _id === "") {
+      res.status(400).json({ msg: "User id doesn't exist" });
     }
     const user = await User.findById(_id).select("-password");
     const newNews = await News.create({

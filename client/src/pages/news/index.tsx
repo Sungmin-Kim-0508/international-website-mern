@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import NewsTemplate from "./template";
 import { RootState } from "rootReducer";
 import { loadPaginatedNews } from "pages/home/actionMethods";
+import { useHistory } from "react-router-dom";
+import routes from "commons/__routes__";
+import NewsTemplate from "./template";
 
 function NewsPage(): React.ReactElement {
   const { home } = useSelector((state: RootState) => state);
@@ -17,9 +19,21 @@ function NewsPage(): React.ReactElement {
     dispatch(loadPaginatedNews(page, numNewsBlock));
   };
 
+  const history = useHistory();
+  /**
+   * Click Event Method to move create news page
+   */
+  const onMoveCreateNews = () => {
+    history.push(routes.newsUpload);
+  };
+
   return (
     <>
-      <NewsTemplate cards={home.news} onPageChange={onPageChange} />
+      <NewsTemplate
+        cards={home.news}
+        onPageChange={onPageChange}
+        onMoveCreateNews={onMoveCreateNews}
+      />
     </>
   );
 }

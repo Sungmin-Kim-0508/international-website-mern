@@ -15,7 +15,7 @@ export const MainTitleWrapper = styled.section`
   margin-bottom: 2rem;
 `;
 
-export const EditTitleWrapper = styled.section`
+export const InputTitleWrapper = styled.section`
   margin-bottom: 2rem;
 `;
 

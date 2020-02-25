@@ -12,6 +12,9 @@ const api = axios.create({
     : `${DEVELOPMENT_URL}${urls.news}`
 });
 
+/**
+ * _id: user id
+ */
 const newsApi = {
   uploadNews: (title, description, _id, tokenConfig) => {
     const { headers } = tokenConfig;

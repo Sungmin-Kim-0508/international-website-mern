@@ -5,7 +5,6 @@ export const Container = styled.div`
   /* grid-auto-flow: column; */
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   column-gap: 1.5rem;
-  padding: 2rem;
 
   /* Mobile */
   @media screen and (max-width: 740px) {
