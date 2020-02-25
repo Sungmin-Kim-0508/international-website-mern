@@ -2,7 +2,6 @@ import authApi from "commons/apis/AuthApi";
 import {
   USER_LOADING,
   AUTH_GOOGLE,
-  USER_LOADED,
   REGISTER_FAIL,
   GOOGLE_LOGIN_ERROR
 } from "../actions";

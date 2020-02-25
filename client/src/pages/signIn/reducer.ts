@@ -3,9 +3,11 @@ import { UserState } from "commons/__types__";
 import { SignInAction } from "./types";
 import {
   AUTH_GOOGLE,
+  CHECKING_TOKEN,
   USER_LOADING,
   USER_LOADED,
-  GOOGLE_LOGIN_ERROR
+  GOOGLE_LOGIN_ERROR,
+  NO_TOKEN
 } from "./actions";
 import { defaultUserInfo, defaultUserState } from "commons/defaultState";
 import { USER_SIGN_OUT } from "pages/header/action";
@@ -13,12 +15,18 @@ import { USER_SIGN_OUT } from "pages/header/action";
 const initialState: UserState = {
   isAuthenciated: false,
   isLoading: false,
-  token: localStorage.getItem("token"),
+  token: localStorage.getItem("token") as string,
   user: defaultUserInfo,
   msg: ""
 };
 
 const signIn = createReducer<UserState, SignInAction>(initialState, {
+  [CHECKING_TOKEN]: state => {
+    return {
+      ...state,
+      isLoading: true
+    };
+  },
   [USER_LOADING]: () => ({
     ...initialState,
     isLoading: true,
@@ -40,7 +48,7 @@ const signIn = createReducer<UserState, SignInAction>(initialState, {
     return {
       isAuthenciated: true,
       isLoading: false,
-      token: "",
+      token: localStorage.getItem("token"),
       user: user,
       msg: "Successfully Login!"
     };
@@ -58,6 +66,13 @@ const signIn = createReducer<UserState, SignInAction>(initialState, {
   [USER_SIGN_OUT]: () => {
     localStorage.removeItem("token");
     return defaultUserState;
+  },
+  [NO_TOKEN]: state => {
+    return {
+      ...state,
+      isAuthenciated: false,
+      isLoading: false
+    };
   }
 });
 

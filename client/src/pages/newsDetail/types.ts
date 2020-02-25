@@ -7,4 +7,5 @@ export type NewsDetailAction = ActionType<typeof action>;
 export type NewsDetailState = {
   newsDetail: News;
   isLoading: boolean;
+  isEdit: boolean;
 };

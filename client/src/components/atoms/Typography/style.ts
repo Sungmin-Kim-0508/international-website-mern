@@ -3,7 +3,7 @@ import styled, { css, ThemedStyledProps } from "styled-components";
 interface TypographyStyleProps {
   styleType: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   textAlign: "left" | "right" | "center" | "justify" | "inherit";
-  color: "primary" | "secondary" | "white" | "gray";
+  color: "primary" | "secondary" | "white" | "gray" | "success" | "danger";
   isItalic?: boolean;
   isBold?: boolean;
   isGeorgiaFont?: boolean;
@@ -44,6 +44,8 @@ const styleColor = (props: ThemedStyledProps<TypographyStyleProps, any>) => {
   else if (props.color === "secondary") return "#ffd615";
   else if (props.color === "white") return "#ffffff";
   else if (props.color === "gray") return "#718093";
+  else if (props.color === "success") return "#00C2ff";
+  else if (props.color === "danger") return "#C70000";
   else return "#000000";
 };
 

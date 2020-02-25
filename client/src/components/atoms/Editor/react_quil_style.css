@@ -1,0 +1,10 @@
+.quill {
+}
+
+.quill .ql-container {
+  height: 250px;
+}
+
+.quill .ql-container .ql-editor {
+  font-family: Georgia;
+}

@@ -1,8 +1,8 @@
 import authApi from "commons/apis/AuthApi";
-import { USER_LOADING, REGISTER_FAIL, USER_LOADED } from "pages/signIn/actions";
+import { CHECKING_TOKEN, USER_LOADED, NO_TOKEN } from "pages/signIn/actions";
 
 export const loadUser = () => (dispatch, getState) => {
-  dispatch({ type: USER_LOADING });
+  dispatch({ type: CHECKING_TOKEN });
   const token = getState().signIn.token;
   return authApi
     .getUserInfo(tokenConfig(token))
@@ -15,7 +15,7 @@ export const loadUser = () => (dispatch, getState) => {
     })
     .catch(error => {
       dispatch({
-        type: REGISTER_FAIL,
+        type: NO_TOKEN,
         payload: error
       });
     });

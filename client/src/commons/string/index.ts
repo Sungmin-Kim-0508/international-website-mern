@@ -36,6 +36,8 @@ export const EMAIL = "email@email.com";
 export const WEBSITE = "Webiste";
 export const WEBSITE_ADDRESS = "www.abc.com"; //"http://www.internationalstudentslondon.org/"
 
+export const SUBMIT = "Submit";
+
 /**
  *  Sign In Page
  */
@@ -63,3 +65,4 @@ export const PLACEHOLDER_CONFIRM_PW = "Confirm Password";
 
 export const EDIT = "Edit";
 export const DELETE = "Delete";
+export const BACK = "Back";

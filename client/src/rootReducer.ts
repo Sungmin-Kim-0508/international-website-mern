@@ -14,11 +14,17 @@ export default rootReducer;
 
 export type RootState = ReturnType<typeof rootReducer>;
 
-const GET_ERRORS = "GET_ERRORS";
-
+/**
+ *  Error Actions, Reducer
+ */
+const GET_ERRORS = "rootReducer/GET_ERRORS";
+export type ErrorState = {
+  msg: string;
+  status: number;
+  id: string;
+};
 export const returnErrors = createAction(GET_ERRORS)<object>();
-
-// export const returnErrors = (msg, status, id = null) => ({
-//   type: GET_ERRORS,
-//   payload: {msg, status, id}
-// })
+export const returnErrorsAction = (msg, status, id = null) => ({
+  type: GET_ERRORS,
+  payload: { msg, status, id }
+});

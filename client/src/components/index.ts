@@ -2,6 +2,7 @@
 export { default as Anchor } from "./atoms/Anchor";
 export { default as Button } from "./atoms/Button";
 export { default as Circle } from "./atoms/Circle";
+export { default as Editor } from "./atoms/Editor";
 export { default as Input } from "./atoms/Input";
 export { default as LabelDate } from "./atoms/LabelDate";
 export { default as Img } from "./atoms/Img";
@@ -26,6 +27,7 @@ export { default as InformationLabel } from "./molecules/InformationLabel";
 export { default as InformationLabelList } from "./molecules/InformationLabelList";
 export { default as NewsDetailTitle } from "./molecules/NewsDetailTitle";
 export { default as RowDirectionCard } from "./molecules/RowDirectionCard";
+export { default as NewsDetailDescription } from "./molecules/NewsDetailDescription";
 export { default as RowCardGrid } from "./molecules/RowCardGrid";
 export { default as ProgramLabels } from "./molecules/ProgramLabels";
 export { default as ProgramGrid } from "./molecules/ProgramGrid";

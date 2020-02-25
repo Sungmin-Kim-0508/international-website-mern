@@ -9,8 +9,8 @@ const SIGN_IN = "/signIn";
 const SIGN_UP = "/signUp";
 
 const NEWS_UPLOAD = `${NEWS}/upload-news`;
-const NEWS_EDIT = `${NEWS}/edit-news`;
-const NEWS_DELETE = `${NEWS}/delete-news`;
+const NEWS_EDIT = `/edit-news`;
+const NEWS_DELETE = `/delete-news`;
 const NEWS_PAGE = "news-page";
 
 const USER_INFO = "/userInfo";

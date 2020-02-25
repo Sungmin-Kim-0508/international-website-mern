@@ -7,7 +7,8 @@ interface IProps {
   isBold?: boolean;
   isGeorgiaFont?: boolean;
   textAlign?: "left" | "right" | "center" | "justify" | "inherit";
-  color?: "primary" | "secondary" | "white" | "gray";
+  color?: "primary" | "secondary" | "white" | "gray" | "success" | "danger";
+  onChange?: () => void;
 }
 
 const Typography: React.FC<IProps> = ({
@@ -17,7 +18,8 @@ const Typography: React.FC<IProps> = ({
   textAlign = "left",
   isItalic = false,
   isBold = false,
-  isGeorgiaFont
+  isGeorgiaFont,
+  onChange
 }) => {
   return (
     <Sc.TypographyStyle
@@ -27,6 +29,7 @@ const Typography: React.FC<IProps> = ({
       isBold={isBold}
       color={color}
       isGeorgiaFont={isGeorgiaFont}
+      onChange={onChange}
     >
       {children}
     </Sc.TypographyStyle>

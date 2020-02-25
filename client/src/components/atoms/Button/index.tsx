@@ -3,7 +3,7 @@ import * as Sc from "./style";
 
 type ButtonProps = {
   /** 버튼 색깔 */
-  theme: "primary" | "danger" | "success";
+  theme: "primary" | "gray" | "success" | "danger";
   /** Routing object of react-router-dom */
   to?: string;
   /** Routing Attribute of HTML DOM */

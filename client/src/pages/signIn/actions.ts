@@ -4,15 +4,17 @@ import { responseGoogleFail } from ".";
 import { USER_SIGN_OUT } from "pages/header/action";
 
 export const AUTH_GOOGLE = "signIn/AUTH_GOOGLE";
-export const GOOGLE_LOGIN_ERROR = "signIn/GOOGLE_LOGIN_ERROR";
 export const AUTH_ERROR = "signIn/AUTH_ERROR";
+export const CHECKING_TOKEN = "signIn/CHECKING_TOKEN";
 export const EDIT_PROFILE = "signIn/EDIT_PROFILE";
 export const FORGET_PASSWORD = "signIn/FORGET_PASSWORD";
 export const GET_ERRORS = "signIn/GET_ERRORS";
+export const GOOGLE_LOGIN_ERROR = "signIn/GOOGLE_LOGIN_ERROR";
 export const LOGIN_SUCCESS = "signIn/LOGIN_SUCCESS";
 export const LOGOUT_SUCCESS = "signIn/LOGOUT_SUCCESS";
 export const REGISTER_SUCCESS = "signIn/REGISTER_SUCCESS";
 export const REGISTER_FAIL = "signIn/REGISTER_FAIL";
+export const NO_TOKEN = "signIn/NO_TOKEN";
 export const USER_LOADED = "signIn/USER_LOADED";
 export const USER_LOADING = "signIn/USER_LOADING";
 
@@ -23,3 +25,6 @@ export const googleLoginError = createAction(GOOGLE_LOGIN_ERROR)<
   responseGoogleFail
 >();
 export const userSignOut = createAction(USER_SIGN_OUT)<UserState>();
+export const registerFail = createAction(REGISTER_FAIL)();
+export const checkingToken = createAction(CHECKING_TOKEN)();
+export const noToken = createAction(NO_TOKEN)();

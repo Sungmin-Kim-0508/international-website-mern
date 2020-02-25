@@ -8,7 +8,14 @@ export const Container = styled.div`
 `;
 
 export const MainTitleWrapper = styled.section`
-  text-align: center;
+  display: grid;
+  justify-content: left;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  margin-bottom: 2rem;
+`;
+
+export const EditTitleWrapper = styled.section`
   margin-bottom: 2rem;
 `;
 

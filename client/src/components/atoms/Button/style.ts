@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 
 const themeFunc = props => {
   if (props.theme === "primary") return "#ffd615";
+  if (props.theme === "gray") return "#718093";
   else if (props.theme === "danger") return "#C70000";
   else if (props.theme === "success") return "#00C2FF";
 };
 
 const hoverThemFucn = props => {
   if (props.theme === "primary") return "#DCD221";
+  if (props.theme === "gray") return "#969fab";
   else if (props.theme === "danger") return "#F24949";
   else if (props.theme === "success") return "#3FAACC";
 };
@@ -17,11 +19,6 @@ const bootstrapBtn = props => {
   if (props.theme === "primary") return "primary";
   else if (props.theme === "danger") return "danger";
   else if (props.theme === "success") return "success";
-};
-
-type WidthHeightProps = {
-  width: string;
-  height: string;
 };
 
 const BtnStyle = css`

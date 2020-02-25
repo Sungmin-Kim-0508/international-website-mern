@@ -1,14 +1,30 @@
 import React from "react";
+import ReactQuill from "react-quill";
 import * as Sc from "./style";
-import { NewsDetailTitle, Paragraph } from "components";
+import { NewsDetailTitle, NewsDetailDescription } from "components";
 import { News } from "commons/__types__";
-import renderHTML from "react-render-html";
 
 type NewsDetailProps = {
   newsDetail: News;
+  isEdit?: boolean;
+  titleRef?: React.RefObject<HTMLInputElement>;
+  editorRef?: React.RefObject<ReactQuill>;
+  onEdit?: () => void;
+  onDelete?: () => void;
+  onBack?: () => void;
+  onEditorChange?: (value: string) => void;
 };
 
-function NewsDetail({ newsDetail }: NewsDetailProps): React.ReactElement {
+function NewsDetail({
+  newsDetail,
+  isEdit,
+  titleRef,
+  editorRef,
+  onEdit,
+  onDelete,
+  onBack,
+  onEditorChange
+}: NewsDetailProps): React.ReactElement {
   const {
     description,
     title,
@@ -17,10 +33,23 @@ function NewsDetail({ newsDetail }: NewsDetailProps): React.ReactElement {
   } = newsDetail;
   return (
     <Sc.Container>
-      <NewsDetailTitle title={title} creatorName={name} createdAt={createdAt} />
-      <Paragraph color="black" textAlign="left">
-        {renderHTML(description)}
-      </Paragraph>
+      <NewsDetailTitle
+        title={title}
+        creatorName={name}
+        createdAt={createdAt}
+        isEdit={isEdit}
+        titleRef={titleRef}
+        onEdit={onEdit}
+        onDelete={onDelete}
+        onBack={onBack}
+      />
+      <NewsDetailDescription
+        description={description}
+        isEdit={isEdit}
+        editorRef={editorRef}
+        onEditorChange={onEditorChange}
+        onBack={onBack}
+      />
     </Sc.Container>
   );
 }

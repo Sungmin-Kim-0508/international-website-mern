@@ -4,14 +4,26 @@ import { News } from "commons/__types__";
 
 type NewsDetailTemplatesProps = {
   newsDetail: News;
+  isEdit?: boolean;
+  onEdit?: () => void;
+  onDelete: () => void;
+  onBack: () => void;
 };
 
 function NewsDetailTemplates({
-  newsDetail
+  newsDetail,
+  onEdit,
+  onDelete,
+  onBack
 }: NewsDetailTemplatesProps): React.ReactElement {
   return (
     <>
-      <NewsDetail newsDetail={newsDetail} />
+      <NewsDetail
+        newsDetail={newsDetail}
+        onEdit={onEdit}
+        onDelete={onDelete}
+        onBack={onBack}
+      />
     </>
   );
 }
