@@ -1,5 +1,6 @@
 import React from "react";
-import { NewsDetail } from "components";
+import * as Sc from "./style";
+import { NewsDetail, Button } from "components";
 import { News } from "commons/__types__";
 
 type NewsDetailTemplatesProps = {
@@ -17,14 +18,21 @@ function NewsDetailTemplates({
   onBack
 }: NewsDetailTemplatesProps): React.ReactElement {
   return (
-    <>
-      <NewsDetail
-        newsDetail={newsDetail}
-        onEdit={onEdit}
-        onDelete={onDelete}
-        onBack={onBack}
-      />
-    </>
+    <Sc.Container>
+      <Sc.NewsDetailWrapper>
+        <NewsDetail
+          newsDetail={newsDetail}
+          onEdit={onEdit}
+          onDelete={onDelete}
+          onBack={onBack}
+        />
+      </Sc.NewsDetailWrapper>
+      <Sc.ButtonWrapper>
+        <Button theme="gray" onClick={onBack}>
+          Back
+        </Button>
+      </Sc.ButtonWrapper>
+    </Sc.Container>
   );
 }
 

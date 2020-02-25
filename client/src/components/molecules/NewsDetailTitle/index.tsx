@@ -48,9 +48,6 @@ function NewsDetailTitle({
       {!isEdit && !isCreate && (
         <>
           <Sc.MainTitleWrapper>
-            <Button theme="gray" onClick={onBack}>
-              Back
-            </Button>
             <Typography styleType="h1" textAlign="center">
               {title}
             </Typography>

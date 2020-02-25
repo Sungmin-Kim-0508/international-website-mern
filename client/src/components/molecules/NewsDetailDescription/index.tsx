@@ -25,9 +25,11 @@ function NewsDetailDescription({
   return (
     <Sc.Container>
       {!isEdit && !isCreate && (
-        <Paragraph color="black" textAlign="left">
-          {renderHTML(description) as React.ReactNode}
-        </Paragraph>
+        <>
+          <Paragraph color="black" textAlign="left">
+            {renderHTML(description) as React.ReactNode}
+          </Paragraph>
+        </>
       )}
       {isCreate && (
         <>

@@ -8,10 +8,8 @@ export const Container = styled.div`
 `;
 
 export const MainTitleWrapper = styled.section`
-  display: grid;
-  justify-content: left;
-  grid-auto-flow: column;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  justify-content: center;
   margin-bottom: 2rem;
 `;
 
@@ -20,8 +18,9 @@ export const InputTitleWrapper = styled.section`
 `;
 
 export const SubTitleWrapper = styled.section`
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
 `;
 
 export const NameDateWarpper = styled.div`
