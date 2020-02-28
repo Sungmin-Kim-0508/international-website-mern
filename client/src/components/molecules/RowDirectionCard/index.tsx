@@ -1,6 +1,7 @@
 import React from "react";
+import renderHTML from "react-render-html";
 import * as Sc from "./style";
-import { Img, LabelDate, Typography } from "components";
+import { LabelDate, Typography } from "components";
 import { News } from "commons/__types__";
 import daysjs from "dayjs";
 
@@ -12,23 +13,15 @@ type RowDirectionCardProps = {
 function RowDirectionCard({
   rowDirectionCard
 }: RowDirectionCardProps): React.ReactElement {
-  const { _id, title, creator, createdAt } = rowDirectionCard;
+  const { _id, title, creator, createdAt, description } = rowDirectionCard;
   return (
     <Sc.LinkWrapper to={`news/${_id}`}>
-      <Sc.ImgWrapper>
-        <Img
-          alt="img"
-          objectFit="cover"
-          src={`${process.env.PUBLIC_URL}/img/focus_dinner.jpg`}
-        />
-      </Sc.ImgWrapper>
       <Sc.ContentWrapper>
-        <LabelDate color="gray">
-          {daysjs(createdAt).format("MMMM DD, YYYY")}
-        </LabelDate>
-        <Typography styleType="h4" color="primary" textAlign="center">
-          {title}
-        </Typography>
+        <Sc.TitleWrapper>
+          <Typography styleType="h3" color="primary" textAlign="left">
+            {title}
+          </Typography>
+        </Sc.TitleWrapper>
         <Typography
           styleType="h6"
           color="primary"
@@ -37,6 +30,14 @@ function RowDirectionCard({
         >
           <span style={{ color: "#718093" }}>By</span> {creator.name}
         </Typography>
+        <Sc.DescriptionWrapper>
+          <Typography color="primary" styleType="h5" textAlign="left">
+            {renderHTML(description).props.children[0].substring(0, 150)}
+          </Typography>
+        </Sc.DescriptionWrapper>
+        <LabelDate color="gray">
+          {daysjs(createdAt).format("MMMM DD, YYYY")}
+        </LabelDate>
       </Sc.ContentWrapper>
     </Sc.LinkWrapper>
   );

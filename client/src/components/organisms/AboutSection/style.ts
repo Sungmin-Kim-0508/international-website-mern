@@ -10,6 +10,10 @@ export const Container = styled.div`
     grid-auto-flow: row;
     grid-template-rows: 0.6fr 1.4fr;
     grid-template-columns: 1fr;
+
+    :first-child {
+      display: none;
+    }
   }
 `;
 

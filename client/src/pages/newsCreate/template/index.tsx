@@ -1,5 +1,6 @@
 import React from "react";
 import ReactQuill from "react-quill";
+import * as Sc from "./style";
 import { NewsCreate } from "components";
 
 type NewsCreateTemplateProps = {
@@ -16,9 +17,11 @@ function NewsCreateTemplate({
   onBack
 }: NewsCreateTemplateProps): React.ReactElement {
   return (
-    <form onSubmit={onSubmit}>
-      <NewsCreate titleRef={titleRef} editorRef={editorRef} onBack={onBack} />
-    </form>
+    <Sc.Container>
+      <form onSubmit={onSubmit}>
+        <NewsCreate titleRef={titleRef} editorRef={editorRef} onBack={onBack} />
+      </form>
+    </Sc.Container>
   );
 }
 

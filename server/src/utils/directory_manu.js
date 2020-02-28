@@ -1,11 +1,11 @@
 /**
- * Returns fileUrl that looks like "uploads/myFolder/myPdf_1580921232.pdf"
+ *
  * @param {object} file             - The object that comes from req.files
  * @param {string} fileName         - The file name that comes from req.body.fileName
  * @param {string} storagePath      - The storage path of google cloud bucket where you want to store files
  *                                  - Note: Make sure add '/' at the end of path.
  *                                  - ex) myRoot/myFolder/
- * @returns {string}
+ * @returns {string}                - Returns fileUrl that looks like "uploads/myFolder/myPdf_1580921232.pdf"
  */
 export const genFileUrl = (file, fileName, storagePath) => {
   /**

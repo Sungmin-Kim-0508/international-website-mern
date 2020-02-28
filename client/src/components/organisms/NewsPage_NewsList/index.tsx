@@ -17,7 +17,7 @@ function NewsList({
   return (
     <Sc.Container>
       <Sc.TitleWrapper>
-        <Typography styleType="h2" textAlign="center">
+        <Typography styleType="h1" textAlign="center">
           News List
         </Typography>
         <Button theme="gray" onClick={onMoveCreateNews}>

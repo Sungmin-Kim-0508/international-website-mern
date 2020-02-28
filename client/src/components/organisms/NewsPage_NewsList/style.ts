@@ -8,7 +8,15 @@ export const Container = styled.div.attrs({
         So, the actual padding is 5rem. 
         (2rem from molecules/RowCardGrid and 3rem from organism/NewsPage_NewsList)
    */
-  padding: 3rem;
+  background-color: #eceeef;
+  padding: 2rem 13rem;
+
+  @media screen and (max-width: 1260px) {
+    padding: 2rem 8rem;
+  }
+  @media screen and (max-width: 780px) {
+    padding: 0.5rem;
+  }
 `;
 
 export const TitleWrapper = styled.section`

@@ -53,12 +53,6 @@ function NewsDetailTitle({
             </Typography>
           </Sc.MainTitleWrapper>
           <Sc.SubTitleWrapper>
-            <Sc.NameDateWarpper>
-              <Typography styleType="h5">{creatorName}</Typography>
-              <LabelDate color="black">
-                {dayjs(createdAt).format("MMMM DD, YYYY")}
-              </LabelDate>
-            </Sc.NameDateWarpper>
             <Sc.ButtonsWarpper>
               <Anchor color="success" onClick={onEdit}>
                 {EDIT}
@@ -68,6 +62,12 @@ function NewsDetailTitle({
                 {DELETE}
               </Anchor>
             </Sc.ButtonsWarpper>
+            <Sc.NameDateWarpper>
+              <Typography styleType="h5">{creatorName}</Typography>
+              <LabelDate color="black">
+                {dayjs(createdAt).format("MMMM DD, YYYY")}
+              </LabelDate>
+            </Sc.NameDateWarpper>
           </Sc.SubTitleWrapper>
         </>
       )}

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactQuill from "react-quill";
+import * as Sc from "./style";
 import { News } from "commons/__types__";
 import { NewsDetail } from "components";
 
@@ -23,16 +24,18 @@ function NewsEditDetailTemplate({
   onSubmit
 }: NewsEditDetailTemplateProps): React.ReactElement {
   return (
-    <form onSubmit={onSubmit}>
-      <NewsDetail
-        newsDetail={newsDetail}
-        isEdit={isEdit}
-        titleRef={titleRef}
-        editorRef={editorRef}
-        onBack={onBack}
-        onEditorChange={onEditorChange}
-      />
-    </form>
+    <Sc.Container>
+      <form onSubmit={onSubmit}>
+        <NewsDetail
+          newsDetail={newsDetail}
+          isEdit={isEdit}
+          titleRef={titleRef}
+          editorRef={editorRef}
+          onBack={onBack}
+          onEditorChange={onEditorChange}
+        />
+      </form>
+    </Sc.Container>
   );
 }
 

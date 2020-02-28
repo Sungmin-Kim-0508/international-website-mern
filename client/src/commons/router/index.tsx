@@ -1,8 +1,13 @@
 import React from "react";
 import NewsRoutes from "./NewsRoutes";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Home, SignIn, SignUp, Header } from "pages";
 import routes from "commons/__routes__";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+import { Home, SignIn, SignUp, Header, UnknownPage } from "pages";
 
 export default (): React.ReactElement => (
   <Router>
@@ -12,6 +17,7 @@ export default (): React.ReactElement => (
       <Route path={routes.signIn} component={SignIn} />
       <Route path={routes.signUp} component={SignUp} />
       <NewsRoutes />
+      <Route path="*" component={UnknownPage} />
     </Switch>
   </Router>
 );

@@ -9,10 +9,10 @@ export const menuStyles = {
     top: "36px"
   },
   bmBurgerBars: {
-    background: "#f7e70f"
+    background: "#718093"
   },
   bmBurgerBarsHover: {
-    background: "#e3d517"
+    background: "#969fab"
   },
   bmCrossButton: {
     height: "24px",
