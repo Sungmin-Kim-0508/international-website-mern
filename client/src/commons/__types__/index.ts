@@ -46,6 +46,24 @@ export type News = {
   newsComments: [];
 };
 
+export type ForStudents = {
+  _id: string;
+  fileName: string;
+  description: string;
+  fileUrl: string;
+  creator: UserInfo;
+  createdAt: Date;
+};
+
+export type ForVolunteers = {
+  _id: string;
+  fileName: string;
+  description: string;
+  fileUrl: string;
+  creator: UserInfo;
+  createdAt: Date;
+};
+
 /**=================================== Reducer State Type ========================================== */
 export type NewsState = {
   news: {
@@ -69,8 +87,20 @@ export type NewsState = {
 export type ForStudentsState = {
   isLoading: boolean;
   msg: string;
-  fileList: [];
-  paginationOptions: {};
+  file: {
+    docs: News[];
+    totalDocs: Number;
+    limit: Number;
+    hasPrevPage: boolean;
+    hasNextPage: boolean;
+    page: Number;
+    totalPages: Number;
+    offset: Number;
+    prevPage: Number | null;
+    nextPage: Number | null;
+    pagingCounter: Number;
+    meta: {};
+  };
 };
 
 export type ForVolunteersState = {

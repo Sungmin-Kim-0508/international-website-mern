@@ -1,5 +1,5 @@
 import axios from "axios";
-import urls from "../components/urls";
+import routes from "commons/__routes__";
 import {
   PRODUCTION_URL,
   IS_PRODUCTION,
@@ -7,7 +7,9 @@ import {
 } from "./production_config";
 
 const api = axios.create({
-  baseURL: IS_PRODUCTION ? PRODUCTION_URL : `${DEVELOPMENT_URL}${urls.NEWS}`
+  baseURL: IS_PRODUCTION
+    ? PRODUCTION_URL
+    : `${DEVELOPMENT_URL}${routes.forStudents}`
 });
 
 const studentApi = {
@@ -21,7 +23,7 @@ const studentApi = {
   },
   getPaginatedFiles: async (pageNum, limit) => {
     try {
-      const { data } = await api.get("student-page", {
+      const { data } = await api.get(routes.studentPage, {
         params: {
           pageNum,
           limit
@@ -35,7 +37,7 @@ const studentApi = {
   uploadFile: async (formData, tokenConfig) => {
     const { headers } = tokenConfig;
     try {
-      const { data } = await api.post(`${urls.UPLOAD}`, formData, {
+      const { data } = await api.post(`${routes.upload}`, formData, {
         headers
       });
       return data;
@@ -46,11 +48,7 @@ const studentApi = {
   deleteFile: async (id, userId, tokenConfig) => {
     const { headers } = tokenConfig;
     try {
-      await api.post(
-        `${id}${urls.FOR_STUDENTS_DELETE}`,
-        { userId },
-        { headers }
-      );
+      await api.post(`${id}${routes.delete}`, { userId }, { headers });
     } catch (error) {
       console.error(error);
     }

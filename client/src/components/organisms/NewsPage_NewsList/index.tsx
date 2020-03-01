@@ -14,6 +14,8 @@ function NewsList({
   onPageChange,
   onMoveCreateNews
 }: NewsListProps): React.ReactElement {
+  const totalPages = cards?.news.totalPages as number;
+
   return (
     <Sc.Container>
       <Sc.TitleWrapper>
@@ -28,7 +30,7 @@ function NewsList({
         <RowCardGrid cards={cards} />
       </Sc.CardsWrapper>
       <Sc.PaginatorWrapper>
-        <Paginator cards={cards} onPageChange={onPageChange} />
+        <Paginator totalPages={totalPages} onPageChange={onPageChange} />
       </Sc.PaginatorWrapper>
     </Sc.Container>
   );

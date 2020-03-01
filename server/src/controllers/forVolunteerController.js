@@ -50,7 +50,7 @@ export const postFileUploadVolunteers = async (req, res) => {
 
   const storagePath = `uploads/volunteerFiles/`;
   const fileUrl = genFileUrl(volunteerFile, fileName, storagePath);
-  volunteerFile.mv(`${fileUrl}`, async err => {
+  volunteerFile.mv(fileUrl, async err => {
     if (err) {
       console.error(err);
       return res.status(500).send(err);

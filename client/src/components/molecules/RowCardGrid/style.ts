@@ -10,7 +10,6 @@ export const Container = styled.div`
   @media screen and (max-width: 740px) {
     grid-auto-flow: row;
     grid-template-columns: none;
-    row-gap: 1.5rem;
-    padding: 1rem;
+    row-gap: 0.5rem;
   }
 `;

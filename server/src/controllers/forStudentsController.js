@@ -1,6 +1,8 @@
 import StudentFile from "../model/StudentFile";
 import User from "../model/User";
 import path from "path";
+import { genFileUrl } from "../../src/utils/directory_manu";
+import { GCPuploadFile } from "../utils/gcp_config";
 
 export const getFilesList = async (req, res) => {
   try {
@@ -45,30 +47,18 @@ export const postFileUploadStudents = (req, res) => {
 
   const { fileName, description, _id } = req.body;
   // In req.files.file, 'file' pertains to formData.append('file')
-  const file = req.files.file;
-  /**
-   *  Reference : https://stackoverflow.com/questions/680929/how-to-extract-extension-from-filename-string-in-javascript
-   * 
-   * (?:         # begin non-capturing group
-      \.         # a dot
-      (          # begin capturing group (captures the actual extension)
-      [^.]+      # anything except a dot, multiple times
-      )          # end capturing group
-      )?         # end non-capturing group, make it optional
-      $          # anchor to the end of the string
-   */
-  const extensionRegx = /(?:\.([^.]+))?$/;
-  const extension = extensionRegx.exec(file.name)[1];
-  const timestamp = Date.now();
-  const storagePath = path.join(__dirname, "..", "uploadTest", "uploads");
-  const fileUrl = `${storagePath}\\${fileName}_${timestamp}.${extension}`;
-  file.mv(`${fileUrl}`, async err => {
+  const studentFile = req.files.file;
+
+  const storagePath = `uploads/studentFiles/`;
+  const fileUrl = genFileUrl(studentFile, fileName, storagePath);
+  studentFile.mv(`${fileUrl}`, async err => {
     if (err) {
       console.error(err);
       return res.status(500).send(err);
     }
 
     try {
+      const { isUploaded, msg } = GCPuploadFile(studentFile, fileUrl);
       const user = await User.findById(_id).select("-password");
       const newFile = await StudentFile.create({
         fileUrl,

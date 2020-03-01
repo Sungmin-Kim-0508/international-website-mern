@@ -26,20 +26,6 @@ export const defaultNews: NewsState = {
   msg: ""
 };
 
-export const defaultForStudents: ForStudentsState = {
-  isLoading: false,
-  msg: "",
-  fileList: [],
-  paginationOptions: {}
-};
-
-export const defaultForVolunteers: ForVolunteersState = {
-  isLoading: false,
-  msg: "",
-  fileList: [],
-  paginationOptions: {}
-};
-
 export const defaultUserInfo: UserInfo = {
   admin: false,
   newsComments: [],
@@ -60,4 +46,30 @@ export const defaultUserState: UserState = {
   isLoading: false,
   user: defaultUserInfo,
   msg: ""
+};
+
+export const defaultForStudents: ForStudentsState = {
+  isLoading: false,
+  msg: "",
+  file: {
+    docs: [],
+    totalDocs: 0,
+    limit: 0,
+    hasPrevPage: false,
+    hasNextPage: false,
+    page: 0,
+    totalPages: 0,
+    offset: 0,
+    prevPage: 0,
+    nextPage: 0,
+    pagingCounter: 0,
+    meta: {}
+  }
+};
+
+export const defaultForVolunteers: ForVolunteersState = {
+  isLoading: false,
+  msg: "",
+  fileList: [],
+  paginationOptions: {}
 };

@@ -2,6 +2,8 @@ const HOME = "/";
 const ABOUT = "/about";
 const NEWS = "/news";
 const SEARCH = "/search";
+const UPLOAD = "/upload";
+const DELETE = "/delete";
 const FOR_STUDENTS = "/forStudents";
 const FOR_VOLUNTEERS = "/forVoluneers";
 const CONTACT = "/contact";
@@ -19,6 +21,8 @@ const AUTH = "/auth";
 const AUTH_GOOGLE = `${AUTH}/google`;
 const AUTH_FACEBOOK = `${AUTH}/facebook`;
 
+const STUDENT_PAGE = "/student-page";
+
 export default {
   home: HOME,
   auth_google: AUTH_GOOGLE,
@@ -30,10 +34,13 @@ export default {
   contact: CONTACT,
   signIn: SIGN_IN,
   signUp: SIGN_UP,
+  studentPage: STUDENT_PAGE,
   newsUpload: NEWS_UPLOAD,
   search: SEARCH,
   newsEdit: NEWS_EDIT,
   newsDelete: NEWS_DELETE,
   newsPage: NEWS_PAGE,
-  userInfo: USER_INFO
+  userInfo: USER_INFO,
+  upload: UPLOAD,
+  delete: DELETE
 };

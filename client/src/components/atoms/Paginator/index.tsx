@@ -1,18 +1,16 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
-import { NewsState } from "commons/__types__";
 import "./style.css";
 
 type PaginatorProps = {
-  cards: NewsState;
+  totalPages?: number;
   onPageChange: (selectedItem: { selected: number }) => void;
 };
 
 function Paginator({
-  cards,
+  totalPages,
   onPageChange
 }: PaginatorProps): React.ReactElement {
-  const { totalPages } = cards.news;
   return (
     <>
       <ReactPaginate
