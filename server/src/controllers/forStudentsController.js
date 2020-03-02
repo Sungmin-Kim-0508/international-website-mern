@@ -1,8 +1,8 @@
 import StudentFile from "../model/StudentFile";
 import User from "../model/User";
 import path from "path";
-import { genFileUrl } from "../../src/utils/directory_manu";
-import { GCPuploadFile } from "../utils/gcp_config";
+import { genFileUrl, extractFileName } from "../../src/utils/directory_manu";
+import { GCPuploadFile, GCPDownloadFile } from "../utils/gcp_config";
 
 export const getFilesList = async (req, res) => {
   try {
@@ -75,6 +75,19 @@ export const postFileUploadStudents = (req, res) => {
       });
     }
   });
+};
+
+export const postDownloadFile = async (req, res) => {
+  const { fileUrl } = req.body;
+  const fileName = extractFileName(fileUrl);
+  console.log(fileUrl);
+  try {
+    GCPDownloadFile(fileName, fileUrl);
+  } catch (error) {
+    res.status(500).json({
+      msg: `Internal Server Error : ${error}`
+    });
+  }
 };
 
 export const postDeleteFileStudents = async (req, res) => {

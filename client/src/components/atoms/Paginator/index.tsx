@@ -17,7 +17,7 @@ function Paginator({
         previousLabel={"<"}
         nextLabel={">"}
         pageCount={totalPages as number}
-        pageRangeDisplayed={5}
+        pageRangeDisplayed={2}
         marginPagesDisplayed={2}
         breakLabel={"..."}
         onPageChange={onPageChange}

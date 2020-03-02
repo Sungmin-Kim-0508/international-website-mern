@@ -32,12 +32,13 @@ const forStudents = createReducer<ForStudentsState, ForStudentsAction>(
   {
     [STUDENTS_FILE_LOADING]: state => ({
       ...state,
+      isLoading: true,
       msg: "Loading..."
     }),
     [GET_PAGINATED_STUDENT_FILES]: (state, { payload }) => {
-      console.log(payload);
       return {
         ...state,
+        isLoading: false,
         file: payload,
         msg: ""
       };

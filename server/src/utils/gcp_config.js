@@ -1,5 +1,6 @@
 import { Storage } from "@google-cloud/storage";
 import path from "path";
+import os from "os";
 
 /**
  * reference: https://dev.to/idiglove/file-upload-with-react-express-and-google-cloud-storage-with-folder-structure-2i5j
@@ -62,7 +63,8 @@ export const GCPdeleteFile = async fileUrl => {
     await storage
       .bucket(process.env.GOOGLE_CLOUD_BUCKET_NAME)
       .file(fileUrl)
-      .delete();
+      .delete()
+      .notification();
 
     console.log(`Successfully delete file`);
     return `Successfully delete file`;
@@ -70,4 +72,16 @@ export const GCPdeleteFile = async fileUrl => {
     console.log(error);
     return `Faile to delete file in bucket - ${error}`;
   }
+};
+
+export const GCPDownloadFile = async (fileName, fileUrl) => {
+  const options = {
+    destination: fileUrl
+  };
+  await storage
+    .bucket(process.env.GOOGLE_CLOUD_BUCKET_NAME)
+    .file(fileUrl)
+    .download(`${os.homedir()}\\downloads\\${fileName}`);
+
+  console.log("Done");
 };

@@ -5,7 +5,8 @@ import {
   getFilesList,
   getStudentsFilesPagination,
   postFileUploadStudents,
-  postDeleteFileStudents
+  postDeleteFileStudents,
+  postDownloadFile
 } from "../controllers/forStudentsController";
 
 const forStudentsRouter = express.Router();
@@ -35,6 +36,13 @@ forStudentsRouter.post(
   privateAuthAdmin,
   postFileUploadStudents
 );
+
+/**
+ *  METHOD : POST
+ *  Routes: "/forStudents/download"
+ */
+
+forStudentsRouter.post(routes.download, postDownloadFile);
 
 /**
  *  METHOD: POST

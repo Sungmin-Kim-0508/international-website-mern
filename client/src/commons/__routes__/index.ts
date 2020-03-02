@@ -1,5 +1,6 @@
 const HOME = "/";
 const ABOUT = "/about";
+const DOWNLOAD = "/download";
 const NEWS = "/news";
 const SEARCH = "/search";
 const UPLOAD = "/upload";
@@ -28,6 +29,7 @@ export default {
   auth_google: AUTH_GOOGLE,
   auth_facebook: AUTH_FACEBOOK,
   about: ABOUT,
+  download: DOWNLOAD,
   news: NEWS,
   forStudents: FOR_STUDENTS,
   forVolunteers: FOR_VOLUNTEERS,

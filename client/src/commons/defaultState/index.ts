@@ -1,11 +1,11 @@
 /** Values of default state for all reducers */
 import {
   NewsState,
-  ForStudentsState,
   ForVolunteersState,
   UserState,
   UserInfo
 } from "commons/__types__";
+import { ForStudentsState } from "pages/forStudents/types";
 
 export const defaultNews: NewsState = {
   news: {

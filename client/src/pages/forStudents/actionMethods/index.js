@@ -6,7 +6,6 @@ export const loadPaginatedFile = (pages = 1, limit = 3) => async dispatch => {
   dispatch(fileLoading());
   try {
     const file = await studentsApi.getPaginatedFiles(pages, limit);
-    console.log(file);
 
     dispatch(pagiantedFilesLoaded(file));
   } catch (err) {

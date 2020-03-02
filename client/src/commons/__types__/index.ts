@@ -84,25 +84,6 @@ export type NewsState = {
   msg: string;
 };
 
-export type ForStudentsState = {
-  isLoading: boolean;
-  msg: string;
-  file: {
-    docs: News[];
-    totalDocs: Number;
-    limit: Number;
-    hasPrevPage: boolean;
-    hasNextPage: boolean;
-    page: Number;
-    totalPages: Number;
-    offset: Number;
-    prevPage: Number | null;
-    nextPage: Number | null;
-    pagingCounter: Number;
-    meta: {};
-  };
-};
-
 export type ForVolunteersState = {
   isLoading: boolean;
   msg: string;

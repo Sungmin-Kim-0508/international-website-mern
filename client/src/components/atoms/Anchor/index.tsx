@@ -2,8 +2,9 @@ import React from "react";
 import * as Sc from "./style";
 
 type AnchorProps = {
-  to?: string;
   children: React.ReactNode;
+  to?: string;
+  id?: string;
   color?:
     | "primary"
     | "secondary"
@@ -12,13 +13,16 @@ type AnchorProps = {
     | "white"
     | "gray"
     | "black";
+  anchorRef?: React.RefObject<HTMLAnchorElement>;
   onClick?: () => void;
 };
 
 function Anchor({
   to,
   children,
+  id = "",
   color = "black",
+  anchorRef,
   onClick
 }: AnchorProps): React.ReactElement {
   if (to) {
@@ -29,7 +33,7 @@ function Anchor({
     );
   } else {
     return (
-      <Sc.StyledAnchor color={color} onClick={onClick}>
+      <Sc.StyledAnchor color={color} onClick={onClick} id={id} ref={anchorRef}>
         {children}
       </Sc.StyledAnchor>
     );

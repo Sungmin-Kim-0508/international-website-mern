@@ -45,6 +45,13 @@ const studentApi = {
       console.log(error.response);
     }
   },
+  downloadFile: async fileUrl => {
+    try {
+      await api.post(`${routes.download}`, { fileUrl });
+    } catch (error) {
+      console.error(error);
+    }
+  },
   deleteFile: async (id, userId, tokenConfig) => {
     const { headers } = tokenConfig;
     try {

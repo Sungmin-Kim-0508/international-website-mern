@@ -35,6 +35,7 @@ const NEWS_PAGE = "/news-page";
 
 const VIDEOS = "/videos";
 const UPLOAD = "/upload";
+const DOWNLOAD = "/download";
 const SEARCH_VIDEO = "/search/videos";
 const VIDEO_DETAIL = "/:id";
 const EDIT_VIDEO = "/:id/edit";
@@ -62,6 +63,7 @@ const routes = {
   registerView: REGISTER_VIEW,
   home: HOME,
   about: ABOUT,
+  download: DOWNLOAD,
   news: NEWS,
   forStudent: FOR_STUDENTS,
   studentPage: STUDENT_PAGE,

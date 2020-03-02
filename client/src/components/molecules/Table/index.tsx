@@ -1,20 +1,91 @@
 import React from "react";
 import * as Sc from "./style";
-import { Tr, Td, Th, Button, Paginator } from "components";
+import uuid4 from "uuid4";
+import { Button, Paginator, Spinner, Anchor } from "components";
+import { ForStudentsState } from "pages/forStudents/types";
 
 type TableProps = {
+  forWhom?: ForStudentsState;
+  anchorRef?: React.RefObject<HTMLAnchorElement>;
+  onDownloadFile?: () => void;
   onPageChange: (selectedItem: { selected: number }) => void;
 };
 
-function Table({ onPageChange }: TableProps): React.ReactElement {
+function TableGenerator({
+  anchorRef,
+  data,
+  onDownloadFile
+}: {
+  anchorRef?: React.RefObject<HTMLAnchorElement>;
+  data: ForStudentsState;
+  onDownloadFile?: () => void;
+}): React.ReactElement {
+  const {
+    file: { docs }
+  } = data;
+
+  return (
+    <Sc.Table>
+      <thead>
+        <tr>
+          <th>File Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {docs.map(item => {
+          return (
+            <tr key={uuid4()}>
+              <td>
+                <Anchor
+                  id={item.fileUrl}
+                  anchorRef={anchorRef}
+                  onClick={onDownloadFile}
+                >
+                  {item.fileName}
+                </Anchor>
+              </td>
+              {/* <td>{item.description}</td> */}
+              <td>
+                LoremIpsumLoremIpsumLorem IpsumLorem IpsumLorem IpsumLorem
+                IpsumLorem IpsumLorem IpsumIpsumLorem IpsumIpsumLorem
+                IpsumIpsumLorem Ipsum
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </Sc.Table>
+  );
+}
+
+function Table({
+  forWhom,
+  anchorRef,
+  onDownloadFile,
+  onPageChange
+}: TableProps): React.ReactElement {
+  const data = React.useMemo(() => forWhom as ForStudentsState, []);
+
   return (
     <Sc.Container>
-      <Sc.Table></Sc.Table>
-      <Sc.ButtonsAndPaginaatorWarpper>
-        <Button theme="success">Upload File</Button>
-        <Paginator onPageChange={onPageChange} />
-        <Button theme="danger">Remove File</Button>
-      </Sc.ButtonsAndPaginaatorWarpper>
+      {data.isLoading && data.file.totalDocs === 0 ? (
+        <Spinner />
+      ) : (
+        <TableGenerator
+          data={data}
+          anchorRef={anchorRef}
+          onDownloadFile={onDownloadFile}
+        />
+      )}
+      <Sc.PaginatorWarpper>
+        <Sc.PaginatorWarpper>
+          <Paginator
+            onPageChange={onPageChange}
+            totalPages={forWhom?.file.totalPages as number}
+          />
+        </Sc.PaginatorWarpper>
+      </Sc.PaginatorWarpper>
     </Sc.Container>
   );
 }

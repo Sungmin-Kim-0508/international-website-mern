@@ -1,10 +1,7 @@
 import { ActionType } from "typesafe-actions";
 import * as action from "./actions";
-import {
-  NewsState,
-  ForStudentsState,
-  ForVolunteersState
-} from "commons/__types__";
+import { NewsState, ForVolunteersState } from "commons/__types__";
+import { ForStudentsState } from "pages/forStudents/types";
 
 export type HomeAction = ActionType<typeof action>;
 // type TodosAction =

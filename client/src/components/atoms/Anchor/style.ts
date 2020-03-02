@@ -29,7 +29,7 @@ export const StyledLink = styled(Link)<StyledAnchorProps>`
   }
 `;
 
-export const StyledAnchor = styled.span<StyledAnchorProps>`
+export const StyledAnchor = styled.a<StyledAnchorProps>`
   color: ${props => {
     if (props.color === "primary") return "#000000";
     else if (props.color === "secondary") return "#ffd615";
@@ -42,6 +42,7 @@ export const StyledAnchor = styled.span<StyledAnchorProps>`
   transition-property: color;
   transition-duration: 1s;
   cursor: pointer;
+  /* cursor: pointer; */
   :hover {
     text-decoration: none;
   }

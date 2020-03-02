@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadUser());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="App">

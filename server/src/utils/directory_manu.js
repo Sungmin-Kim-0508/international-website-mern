@@ -26,3 +26,9 @@ export const genFileUrl = (file, fileName, storagePath) => {
   const fileUrl = `${storagePath}${fileName}_${timestamp}.${extension}`;
   return fileUrl;
 };
+
+export const extractFileName = fileUrl => {
+  const fileNameArray = fileUrl.split("/");
+  const fileName = fileNameArray[fileNameArray.length - 1];
+  return fileName;
+};
