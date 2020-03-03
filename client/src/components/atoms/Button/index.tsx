@@ -8,6 +8,8 @@ type ButtonProps = {
   to?: string;
   /** Routing Attribute of HTML DOM */
   href?: string;
+  /** Type */
+  type?: "button" | "submit";
   /** Button 클릭할 때 호출되는 MouseEvent 함수 */
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
@@ -18,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   theme,
   to,
   href,
+  type,
   onClick
 }) => {
   if (to) {
@@ -34,7 +37,7 @@ const Button: React.FC<ButtonProps> = ({
     );
   } else {
     return (
-      <Sc.Btn theme={theme} onClick={onClick}>
+      <Sc.Btn theme={theme} type={type} onClick={onClick}>
         {children}
       </Sc.Btn>
     );

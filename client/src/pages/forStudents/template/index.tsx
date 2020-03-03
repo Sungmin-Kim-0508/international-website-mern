@@ -7,7 +7,16 @@ type ForStudentsSectionTemplateProps = {
   SUBTITLE: string;
   DESC: string;
   anchorRef: React.RefObject<HTMLAnchorElement>;
+  refsInModal: {
+    inputRef: React.RefObject<HTMLInputElement>;
+    inputFileRef: React.RefObject<HTMLInputElement>;
+    textAreaRef: React.RefObject<HTMLTextAreaElement>;
+  };
+  modalIsOpen: boolean;
   forStudents: ForStudentsState;
+  openModal: () => void;
+  closeModal: () => void;
+  onSubmit: (e: React.FormEvent<HTMLElement>) => void;
   onDownloadFile: () => void;
   onPageChange: (selectedItem: { selected: number }) => void;
 };
@@ -17,7 +26,12 @@ function ForStudentsTemplate({
   SUBTITLE,
   DESC,
   anchorRef,
+  refsInModal,
+  modalIsOpen,
   forStudents,
+  openModal,
+  closeModal,
+  onSubmit,
   onDownloadFile,
   onPageChange
 }: ForStudentsSectionTemplateProps): React.ReactElement {
@@ -28,7 +42,12 @@ function ForStudentsTemplate({
         SUBTITLE={SUBTITLE}
         DESC={DESC}
         anchorRef={anchorRef}
+        refsInModal={refsInModal}
         forWhom={forStudents}
+        modalIsOpen={modalIsOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+        onSubmit={onSubmit}
         onDownloadFile={onDownloadFile}
         onPageChange={onPageChange}
       />

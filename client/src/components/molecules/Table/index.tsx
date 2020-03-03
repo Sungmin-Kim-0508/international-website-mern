@@ -23,7 +23,6 @@ function TableGenerator({
   const {
     file: { docs }
   } = data;
-
   return (
     <Sc.Table>
       <thead>
@@ -65,11 +64,11 @@ function Table({
   onDownloadFile,
   onPageChange
 }: TableProps): React.ReactElement {
-  const data = React.useMemo(() => forWhom as ForStudentsState, []);
+  const data = forWhom as ForStudentsState;
 
   return (
     <Sc.Container>
-      {data.isLoading && data.file.totalDocs === 0 ? (
+      {data.isLoading ? (
         <Spinner />
       ) : (
         <TableGenerator

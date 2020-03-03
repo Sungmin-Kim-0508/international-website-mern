@@ -2,8 +2,6 @@ import newsApi from "commons/apis/NewsApi";
 import { newsLoaded, newsLoading, newsPaginationLoaded } from "../actions";
 import { returnErrors } from "../../../rootReducer";
 
-// const content = useSelector(state => state);
-
 export function loadNews() {
   return async dispatch => {
     dispatch(newsLoading());

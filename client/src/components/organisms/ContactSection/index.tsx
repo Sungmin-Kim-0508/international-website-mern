@@ -1,6 +1,6 @@
 import React from "react";
 import * as Sc from "./style";
-import { ContactForm, Img } from "components";
+import { ContactForm } from "components";
 
 type ContactFormProps = {};
 

@@ -15,7 +15,7 @@ function NewsDetailPage() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSingleNewsDetail(id));
-  }, []);
+  }, [dispatch]);
   const { newsDetail, isLoading, isEdit } = useSelector(
     (state: RootState) => state.newsDetail
   );

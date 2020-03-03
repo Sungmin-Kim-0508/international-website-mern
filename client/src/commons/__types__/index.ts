@@ -46,15 +46,6 @@ export type News = {
   newsComments: [];
 };
 
-export type ForStudents = {
-  _id: string;
-  fileName: string;
-  description: string;
-  fileUrl: string;
-  creator: UserInfo;
-  createdAt: Date;
-};
-
 export type ForVolunteers = {
   _id: string;
   fileName: string;

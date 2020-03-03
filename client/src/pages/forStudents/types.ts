@@ -1,6 +1,15 @@
-import { ForStudents } from "commons/__types__";
+import { UserInfo } from "commons/__types__";
 import * as action from "./action";
 import { ActionType } from "typesafe-actions";
+
+export type ForStudents = {
+  _id: string;
+  fileName: string;
+  description: string;
+  fileUrl: string;
+  creator: UserInfo;
+  createdAt: Date;
+};
 
 export type ForStudentsAction = ActionType<typeof action>;
 

@@ -28,6 +28,7 @@ export { default as ColumnDirectionCard } from "./molecules/ColumnDirectionCard"
 export { default as DropDownItems } from "./molecules/DropDownItems";
 export { default as InformationLabel } from "./molecules/InformationLabel";
 export { default as InformationLabelList } from "./molecules/InformationLabelList";
+export { default as Modal } from "./molecules/Modal";
 export { default as NewsDetailTitle } from "./molecules/NewsDetailTitle";
 export { default as RowDirectionCard } from "./molecules/RowDirectionCard";
 export { default as NewsDetailDescription } from "./molecules/NewsDetailDescription";

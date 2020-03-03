@@ -46,8 +46,8 @@ export const postFileUploadStudents = (req, res) => {
   }
 
   const { fileName, description, _id } = req.body;
-  // In req.files.file, 'file' pertains to formData.append('file')
-  const studentFile = req.files.file;
+  // In req.files.studentFile, 'studentFile' pertains to formData.append('studentFile')
+  const studentFile = req.files.studentFile;
 
   const storagePath = `uploads/studentFiles/`;
   const fileUrl = genFileUrl(studentFile, fileName, storagePath);

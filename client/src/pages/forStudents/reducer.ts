@@ -2,8 +2,8 @@ import { createReducer } from "typesafe-actions";
 import { ForStudentsState, ForStudentsAction } from "./types";
 import {
   STUDENTS_FILE_LOADING,
-  GET_ALL_STUDENTS_FILE,
-  GET_PAGINATED_STUDENT_FILES
+  GET_PAGINATED_STUDENT_FILES,
+  UPLOAD_FILE
 } from "./action";
 
 const defaultFile = {
@@ -41,6 +41,13 @@ const forStudents = createReducer<ForStudentsState, ForStudentsAction>(
         isLoading: false,
         file: payload,
         msg: ""
+      };
+    },
+    [UPLOAD_FILE]: (state, _) => {
+      return {
+        ...state,
+        isLoading: false,
+        msg: "Upload Success!"
       };
     }
   }

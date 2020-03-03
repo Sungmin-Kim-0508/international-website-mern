@@ -12,7 +12,7 @@ function NewsPage(): React.ReactElement {
   const numNewsBlock = 6;
   useEffect(() => {
     dispatch(loadPaginatedNews(1, numNewsBlock));
-  }, []);
+  }, [dispatch]);
 
   const onPageChange = (selectedItem: { selected: number }) => {
     const page = selectedItem.selected + 1;

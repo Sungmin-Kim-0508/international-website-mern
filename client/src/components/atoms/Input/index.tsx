@@ -4,6 +4,7 @@ import * as Sc from "./style";
 type InputProps = {
   placeholder?: string;
   value?: string;
+  required?: boolean;
   defaultValue?: string;
   type?: "text" | "button";
   inputRef?: React.RefObject<HTMLInputElement>;
@@ -13,6 +14,7 @@ type InputProps = {
 const Input: React.FC<InputProps> = ({
   value,
   defaultValue,
+  required,
   type,
   inputRef,
   placeholder
@@ -22,6 +24,7 @@ const Input: React.FC<InputProps> = ({
       placeholder={placeholder}
       value={value}
       defaultValue={defaultValue}
+      required={required}
       type={type}
       ref={inputRef}
     />

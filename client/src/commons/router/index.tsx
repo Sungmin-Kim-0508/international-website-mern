@@ -16,9 +16,9 @@ export default (): React.ReactElement => (
     <Switch>
       <Route path={routes.home} component={Home} exact />
       <Route path={routes.forStudents} component={ForStudents} exact={true} />
-      <NewsRoutes />
       <Route path={routes.signIn} component={SignIn} />
       <Route path={routes.signUp} component={SignUp} />
+      <NewsRoutes />
       <Route path="*" component={UnknownPage} />
     </Switch>
   </Router>

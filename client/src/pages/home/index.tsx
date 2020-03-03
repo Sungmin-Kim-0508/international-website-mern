@@ -10,7 +10,7 @@ function HomePage(): React.ReactElement {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadPaginatedNews());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

@@ -3,10 +3,23 @@ import * as Sc from "./style";
 
 type TextAreaProps = {
   placeholder?: string;
+  required?: boolean;
+  textAreaRef?: React.RefObject<HTMLTextAreaElement>;
 };
-const TextArea: React.FC<TextAreaProps> = ({ children, placeholder }) => {
+const TextArea: React.FC<TextAreaProps> = ({
+  children,
+  required,
+  placeholder,
+  textAreaRef
+}) => {
   return (
-    <Sc.StyledTextArea placeholder={placeholder}>{children}</Sc.StyledTextArea>
+    <Sc.StyledTextArea
+      placeholder={placeholder}
+      required={required}
+      ref={textAreaRef}
+    >
+      {children}
+    </Sc.StyledTextArea>
   );
 };
 
