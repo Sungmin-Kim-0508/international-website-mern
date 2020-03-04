@@ -1,15 +1,11 @@
 import axios from "axios";
 import routes from "commons/__routes__";
-import {
-  PRODUCTION_URL,
-  IS_PRODUCTION,
-  DEVELOPMENT_URL
-} from "./production_config";
 
 const api = axios.create({
-  baseURL: IS_PRODUCTION
-    ? PRODUCTION_URL
-    : `${DEVELOPMENT_URL}${routes.forStudents}`
+  baseURL:
+    process.env.REACT_APP_IS_PRODUCTION === "true"
+      ? `${process.env.REACT_APP_PRODUCTION_URL}${routes.forStudents}`
+      : `${process.env.REACT_APP_DEVELOPMENT_URL}${routes.forStudents}`
 });
 
 const studentApi = {

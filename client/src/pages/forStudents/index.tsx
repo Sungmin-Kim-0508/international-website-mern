@@ -63,6 +63,27 @@ function ForStudentsPage(): React.ReactElement {
     setIsOpen(false);
   };
 
+  /**
+   *  onDelete Business Logic
+   */
+  const [isDelete, toggleDelete] = useState(false);
+  const onDelete = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    toggleDelete(true);
+  };
+  const onDeleteCancel = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    toggleDelete(false);
+  };
+
+  const deleteCollection = {
+    isDelete,
+    onDelete,
+    onDeleteCancel
+  };
+
   return (
     <ForStudentsTemplate
       TITLE={TITLE}

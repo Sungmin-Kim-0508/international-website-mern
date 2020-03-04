@@ -11,6 +11,7 @@ import userRouter from "./routers/userRouter";
 import newsRouter from "./routers/newsRouter";
 import videoRouter from "./routers/videoRouter";
 import apiRouter from "./routers/apiRouter";
+import path from "path";
 
 const app = express();
 
@@ -18,6 +19,7 @@ const app = express();
 import forStudentsRouter from "./routers/forStudentsRouter";
 import forVolunteerRouter from "./routers/forVolunteerRouter";
 
+app.use(express.static(path.join(__dirname, "build/static")));
 app.use(helmet());
 app.use(
   fileUpload({

@@ -1,13 +1,10 @@
 import axios from "axios";
-import urls from "../components/urls";
-import {
-  PRODUCTION_URL,
-  IS_PRODUCTION,
-  DEVELOPMENT_URL
-} from "./production_config";
 
 const api = axios.create({
-  baseURL: IS_PRODUCTION ? PRODUCTION_URL : `${DEVELOPMENT_URL}${urls.NEWS}`
+  baseURL:
+    process.env.REACT_APP_IS_PRODUCTION === "true"
+      ? process.env.REACT_APP_PRODUCTION_URL
+      : process.env.REACT_APP_DEVELOPMENT_URL
 });
 
 export const normalApi = {

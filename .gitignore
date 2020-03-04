@@ -115,3 +115,4 @@ package-lock.json
 .vscode
 uploads
 international-website-mern-5ca9fba931ea.json
+build/
