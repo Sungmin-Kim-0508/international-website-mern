@@ -19,7 +19,6 @@ const app = express();
 import forStudentsRouter from "./routers/forStudentsRouter";
 import forVolunteerRouter from "./routers/forVolunteerRouter";
 
-app.use(express.static(path.join(__dirname, "build/static")));
 app.use(helmet());
 app.use(
   fileUpload({
@@ -32,6 +31,11 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
+
+app.use(express.static(path.join(__dirname, "../build/static")));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build/static", "index.html"));
+});
 
 app.use(routes.home, globalRouter);
 app.use(routes.news, newsRouter);

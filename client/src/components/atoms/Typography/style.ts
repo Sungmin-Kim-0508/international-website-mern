@@ -56,5 +56,5 @@ export const TypographyStyle = styled.span<TypographyStyleProps>`
   color: ${styleColor};
   ${styleTypeFunc};
   line-height: 1.2;
-  text-align: ${props => props.textAlign};
+  /* text-align: ${props => props.textAlign}; */
 `;

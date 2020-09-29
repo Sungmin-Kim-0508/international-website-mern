@@ -1,5 +1,7 @@
 import React from "react";
 import SignInTemplates from "./templates";
+import routes from "commons/__routes__";
+import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
   GoogleLoginResponse,
@@ -15,11 +17,13 @@ export type responseGoogleFail = {
 export default function SignInPage(): React.ReactElement {
   const dispatch = useDispatch();
 
+  const history = useHistory();
   const responseGoogle = (
     response: GoogleLoginResponse | GoogleLoginResponseOffline
   ) => {
     const { profileObj } = response as GoogleLoginResponse;
     dispatch(googleLogin(profileObj));
+    history.push(routes.home);
   };
 
   const responseGoogleFail = ({ error, details }: responseGoogleFail) => {

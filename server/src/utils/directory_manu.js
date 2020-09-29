@@ -7,7 +7,7 @@
  *                                  - ex) myRoot/myFolder/
  * @returns {string}                - Returns fileUrl that looks like "uploads/myFolder/myPdf_1580921232.pdf"
  */
-export const genFileUrl = (file, fileName, storagePath) => {
+const genFileUrl = (file, fileName, storagePath) => {
   /**
    *  Reference : https://stackoverflow.com/questions/680929/how-to-extract-extension-from-filename-string-in-javascript
    * 
@@ -27,8 +27,12 @@ export const genFileUrl = (file, fileName, storagePath) => {
   return fileUrl;
 };
 
-export const extractFileName = fileUrl => {
+exports.genFileUrl = genFileUrl;
+
+const extractFileName = fileUrl => {
   const fileNameArray = fileUrl.split("/");
   const fileName = fileNameArray[fileNameArray.length - 1];
   return fileName;
 };
+
+exports.extractFileName = extractFileName;

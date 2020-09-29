@@ -1,6 +1,6 @@
-import { Storage } from "@google-cloud/storage";
-import path from "path";
-import os from "os";
+const { Storage } = require("@google-cloud/storage");
+const path = require("path");
+const os = require("os");
 
 /**
  * reference: https://dev.to/idiglove/file-upload-with-react-express-and-google-cloud-storage-with-folder-structure-2i5j
@@ -19,7 +19,7 @@ const storage = new Storage({
  * @param {object} file - The object that comes from req.files.myFile
  * @param {string} fileUrl   - The path including file name where you want to store files in google bucket
  */
-export const GCPuploadFile = async (file, fileUrl) => {
+const GCPuploadFile = async (file, fileUrl) => {
   try {
     let bucket = storage.bucket(process.env.GOOGLE_CLOUD_BUCKET_NAME);
 
@@ -58,7 +58,7 @@ export const GCPuploadFile = async (file, fileUrl) => {
  * @param {string} fileUrl - The path including file name where you want to delete files in google bucket
  */
 
-export const GCPdeleteFile = async fileUrl => {
+const GCPdeleteFile = async fileUrl => {
   try {
     await storage
       .bucket(process.env.GOOGLE_CLOUD_BUCKET_NAME)
@@ -74,7 +74,7 @@ export const GCPdeleteFile = async fileUrl => {
   }
 };
 
-export const GCPDownloadFile = async (fileName, fileUrl) => {
+const GCPDownloadFile = async (fileName, fileUrl) => {
   const options = {
     destination: fileUrl
   };
@@ -85,3 +85,9 @@ export const GCPDownloadFile = async (fileName, fileUrl) => {
 
   console.log("Done");
 };
+
+module.exports = {
+  GCPuploadFile,
+  GCPdeleteFile,
+  GCPDownloadFile
+}
