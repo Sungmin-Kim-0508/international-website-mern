@@ -1,6 +1,4 @@
 # International Website_V2
-
-## Description
 The community website for newcomers in Canada using React + Redux with Typescript, Express.js and MongoDB
 
 ## What Tech I Use
@@ -10,7 +8,7 @@ The community website for newcomers in Canada using React + Redux with Typescrip
 - Testing Tools : Storybook, Cypress
 
 ## What is Atomic Design Pattern?
-UI 디자인을 작은 원자(컴포넌트) 단위로 하나씩 구성하면서 컴포넌트 단위의 크기를 크게 해나가면서 하나의 페이지를 완성하는 디자인 시스템이다. Atoms, Molecules, Organisms, Templates, Pages, 5단계로 이루어져 있고, Atoms에서 Page로 구성되어 있다.
+![image](https://user-images.githubusercontent.com/37981164/94701004-23327e00-030a-11eb-8d4e-a95429fa42d8.png)
 
 Atomic Design Pattern is design system that creates a full UI page, combining atomic elements(small components) with other elements(Molecules, Organisms)
 
