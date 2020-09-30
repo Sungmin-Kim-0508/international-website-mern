@@ -1,10 +1,11 @@
 import axios from "axios";
 import routes from "commons/__routes__";
+import { PRODUCTION_URL } from "./production_config"
 
 const api = axios.create({
   baseURL:
     process.env.REACT_APP_IS_PRODUCTION === "true"
-      ? process.env.REACT_APP_PRODUCTION_URL
+      ? PRODUCTION_URL
       : process.env.REACT_APP_DEVELOPMENT_URL
 });
 
