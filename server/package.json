@@ -13,6 +13,9 @@
   },
   "author": "Sungmin Kim",
   "license": "ISC",
+  "engines": {
+    "node": "10.15.3"
+  },
   "dependencies": {
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
