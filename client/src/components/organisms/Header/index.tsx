@@ -19,11 +19,11 @@ function Header({ signIn, onSignOut }: HeaderProps): React.ReactElement {
       {isAuthenciated && <Profile avatarUrl={avatarUrl} name={name} />}
       <Sc.ItemsWrapper>
         <NavItem to={routes.home}>Home</NavItem>
-        <NavItem to={routes.about}>About</NavItem>
+        {/* <NavItem to={routes.about}>About</NavItem> */}
         <NavItem to={routes.news}>News</NavItem>
         <NavItem to={routes.forStudents}>For Students</NavItem>
-        <NavItem to={routes.forVolunteers}>For Volunteer</NavItem>
-        <NavItem to={routes.contact}>Contact</NavItem>
+        {/* <NavItem to={routes.forVolunteers}>For Volunteer</NavItem> */}
+        {/* <NavItem to={routes.contact}>Contact</NavItem> */}
         {isAuthenciated ? <AuthLink onSignOut={onSignOut} /> : <GuestLink />}
       </Sc.ItemsWrapper>
     </Menu>

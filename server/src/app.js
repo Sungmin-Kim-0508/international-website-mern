@@ -25,6 +25,7 @@ app.use(
     createParentPath: true
   })
 );
+app.use(express.static(path.join(__dirname, "./public")));
 app.use("/uploads", express.static("uploads"));
 app.use(cors());
 app.use(cookieParser());
@@ -32,9 +33,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
-app.use(express.static(path.join(__dirname, "../build/static")));
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../build/static", "index.html"));
+  res.sendFile(path.join(__dirname, "./public", "index.html"));
 });
 
 app.use(routes.home, globalRouter);

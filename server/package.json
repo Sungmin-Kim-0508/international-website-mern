@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Server part of International Website",
-  "main": "index.js",
+  "main": "src/init.js",
   "scripts": {
     "dev:server": "nodemon --exec babel-node src/init.js --delay 2",
     "prebuild": "rd /s \"build\"",
